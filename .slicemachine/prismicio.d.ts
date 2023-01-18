@@ -77,6 +77,16 @@ export interface HeaderSliceDefaultItem {
      *
      */
     navlinks: prismicT.LinkField;
+    /**
+     * NavTitle field in *Header → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.items[].navtitle
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    navtitle: prismicT.KeyTextField;
 }
 /**
  * Default variation for Header Slice

@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./style.module.css";
 import Image from "next/image";
+import Link from "next/link";
 import { PrismicRichText } from "@prismicio/react";
 import { PrismicLink } from "@prismicio/react";
 
@@ -14,25 +15,27 @@ const Header = ({ slice }) => (
         <header className={styles.header}>
             <div className={styles.wrapper}>
                 <div className={styles.logo}>
-                    <Image
-                        src={slice.primary.logo.url}
-                        alt={slice.primary.logo.alt}
-                        width={100}
-                        height={100}
-                    />
-                    <a className={styles.title} href="#">
-                        <PrismicRichText field={slice.primary.title} />
-                    </a>
+                    <Link href="/">
+                        <Image
+                            src={slice.primary.logo.url}
+                            alt={slice.primary.logo.alt}
+                            width={100}
+                            height={100}
+                        />
+                    </Link>
                 </div>
+                <Link className={styles.title} href="#">
+                    <PrismicRichText field={slice.primary.title} />
+                </Link>
                 <nav className={styles.nav}>
                     <ul>
-                        <li>
-                            {slice?.items?.map((item, i) => (
+                        {slice?.items?.map((item, i) => (
+                            <li key={i}>
                                 <PrismicLink field={item.navlinks}>
-                                    My Link
+                                    {item.navtitle}
                                 </PrismicLink>
-                            ))}
-                        </li>
+                            </li>
+                        ))}
                     </ul>
                 </nav>
             </div>
