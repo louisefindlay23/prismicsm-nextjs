@@ -1,16 +1,9 @@
 /* Header */
-.wrapper {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1140px;
-    padding: 0 1rem;
-    margin: auto;
-}
 
 .header {
     position: relative;
     background: var(--os-primary-color);
+    border-bottom: 3.5px solid black;
 }
 
 .header a {
@@ -21,6 +14,15 @@
 
 .header a:hover {
     text-decoration: underline;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1140px;
+    padding: 0 1rem;
+    margin: auto;
 }
 
 .logo {
@@ -50,6 +52,8 @@
     font-size: 1rem;
     font-weight: 500;
 }
+
+/* Media Queries */
 
 @media (max-width: 669px) {
     .wrapper {

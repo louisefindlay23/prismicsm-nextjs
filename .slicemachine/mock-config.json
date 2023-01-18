@@ -8,6 +8,11 @@
         "primary": {}
       }
     },
-    "Test": {}
+    "Test": {},
+    "Hero": {
+      "default": {
+        "primary": {}
+      }
+    }
   }
 }

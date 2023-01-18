@@ -1,0 +1,58 @@
+[
+  {
+    "__TYPE__": "SharedSliceContent",
+    "variation": "default",
+    "primary": {
+      "heroimage": {
+        "origin": {
+          "id": "main",
+          "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
+          "width": 4160,
+          "height": 3120
+        },
+        "url": "https://images.unsplash.com/photo-1560457079-9a6532ccb118",
+        "width": 4160,
+        "height": 3120,
+        "edit": {
+          "zoom": 1,
+          "crop": {
+            "x": 0,
+            "y": 0
+          },
+          "background": "transparent"
+        },
+        "credits": null,
+        "alt": null,
+        "__TYPE__": "ImageContent",
+        "thumbnails": {}
+      },
+      "heroheading": {
+        "__TYPE__": "FieldContent",
+        "value": "opposite",
+        "type": "Text"
+      },
+      "herotext": {
+        "__TYPE__": "FieldContent",
+        "value": "season",
+        "type": "Text"
+      },
+      "herorichtext": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Consequat labore incididunt sit eiusmod eu consectetur aliqua ullamco ipsum consequat et enim Lorem. Do tempor adipisicing minim aliquip anim ad proident pariatur amet eiusmod sint ullamco officia. Labore labore velit magna nulla velit enim magna sint velit excepteur laborum duis amet dolore incididunt."
+            }
+          }
+        ]
+      }
+    },
+    "items": [
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": []
+      }
+    ]
+  }
+]

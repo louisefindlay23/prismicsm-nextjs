@@ -112,33 +112,53 @@ type HeaderSliceVariation = HeaderSliceDefault;
  */
 export type HeaderSlice = prismicT.SharedSlice<"header", HeaderSliceVariation>;
 /**
- * Primary content in Test → Primary
+ * Primary content in Hero → Primary
  *
  */
 interface TestSliceDefaultPrimary {
     /**
-     * Title field in *Test → Primary*
+     * heroImage field in *Hero → Primary*
      *
-     * - **Field Type**: Title
-     * - **Placeholder**: This is where it all begins...
-     * - **API ID Path**: test.primary.title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: test.primary.heroimage
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
      *
      */
-    title: prismicT.TitleField;
+    heroimage: prismicT.ImageField<never>;
     /**
-     * Description field in *Test → Primary*
+     * heroHeading field in *Hero → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: test.primary.heroheading
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    heroheading: prismicT.KeyTextField;
+    /**
+     * heroText field in *Hero → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: test.primary.herotext
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    herotext: prismicT.KeyTextField;
+    /**
+     * heroRichText field in *Hero → Primary*
      *
      * - **Field Type**: Rich Text
-     * - **Placeholder**: A nice description of your feature
-     * - **API ID Path**: test.primary.description
+     * - **Placeholder**: *None*
+     * - **API ID Path**: test.primary.herorichtext
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    description: prismicT.RichTextField;
+    herorichtext: prismicT.RichTextField;
 }
 /**
- * Default variation for Test Slice
+ * Default variation for Hero Slice
  *
  * - **API ID**: `default`
  * - **Description**: `Test`
@@ -147,12 +167,12 @@ interface TestSliceDefaultPrimary {
  */
 export type TestSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<TestSliceDefaultPrimary>, never>;
 /**
- * Slice variation for *Test*
+ * Slice variation for *Hero*
  *
  */
 type TestSliceVariation = TestSliceDefault;
 /**
- * Test Shared Slice
+ * Hero Shared Slice
  *
  * - **API ID**: `test`
  * - **Description**: `Test`
