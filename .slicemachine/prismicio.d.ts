@@ -137,16 +137,6 @@ interface TestSliceDefaultPrimary {
      */
     heroheading: prismicT.KeyTextField;
     /**
-     * heroText field in *Hero → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: test.primary.herotext
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    herotext: prismicT.KeyTextField;
-    /**
      * heroRichText field in *Hero → Primary*
      *
      * - **Field Type**: Rich Text
@@ -156,6 +146,16 @@ interface TestSliceDefaultPrimary {
      *
      */
     herorichtext: prismicT.RichTextField;
+    /**
+     * heroButtonText field in *Hero → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: test.primary.herobuttontext
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    herobuttontext: prismicT.KeyTextField;
 }
 /**
  * Default variation for Hero Slice

@@ -31,11 +31,6 @@
         "value": "opposite",
         "type": "Text"
       },
-      "herotext": {
-        "__TYPE__": "FieldContent",
-        "value": "season",
-        "type": "Text"
-      },
       "herorichtext": {
         "__TYPE__": "StructuredTextContent",
         "value": [
@@ -46,6 +41,11 @@
             }
           }
         ]
+      },
+      "herobuttontext": {
+        "__TYPE__": "FieldContent",
+        "value": "older",
+        "type": "Text"
       }
     },
     "items": [
