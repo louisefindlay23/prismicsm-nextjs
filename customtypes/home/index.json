@@ -22,6 +22,9 @@
             },
             "test": {
               "type": "SharedSlice"
+            },
+            "feature_grid": {
+              "type": "SharedSlice"
             }
           }
         }

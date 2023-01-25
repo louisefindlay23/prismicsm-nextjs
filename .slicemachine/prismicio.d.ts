@@ -24,7 +24,7 @@ interface HomeDocumentData {
  * Slice for *Home → Slice Zone*
  *
  */
-type HomeDocumentDataSlicesSlice = HeaderSlice | TestSlice;
+type HomeDocumentDataSlicesSlice = HeaderSlice | TestSlice | FeatureGridSlice;
 /**
  * Home document from Prismic
  *
@@ -36,6 +36,29 @@ type HomeDocumentDataSlicesSlice = HeaderSlice | TestSlice;
  */
 export type HomeDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<HomeDocumentData>, "home", Lang>;
 export type AllDocumentTypes = HomeDocument;
+/**
+ * Default variation for FeatureGrid Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `FeatureGrid`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FeatureGridSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, never>;
+/**
+ * Slice variation for *FeatureGrid*
+ *
+ */
+type FeatureGridSliceVariation = FeatureGridSliceDefault;
+/**
+ * FeatureGrid Shared Slice
+ *
+ * - **API ID**: `feature_grid`
+ * - **Description**: `FeatureGrid`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FeatureGridSlice = prismicT.SharedSlice<"feature_grid", FeatureGridSliceVariation>;
 /**
  * Primary content in Header → Primary
  *
@@ -185,6 +208,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, AllDocumentTypes, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, TestSliceDefaultPrimary, TestSliceDefault, TestSliceVariation, TestSlice };
+        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, AllDocumentTypes, FeatureGridSliceDefault, FeatureGridSliceVariation, FeatureGridSlice, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, TestSliceDefaultPrimary, TestSliceDefault, TestSliceVariation, TestSlice };
     }
 }

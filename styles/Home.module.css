@@ -52,6 +52,7 @@
     background: rgba(var(--card-rgb), 0);
     border: 1px solid rgba(var(--card-border-rgb), 0);
     transition: background 200ms, border 200ms;
+    box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
 }
 
 .card span {
