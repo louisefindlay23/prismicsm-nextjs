@@ -35,4 +35,5 @@ button:hover {
     background: white;
     color: black;
     border-color: black;
+    cursor: pointer;
 }
