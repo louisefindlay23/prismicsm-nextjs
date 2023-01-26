@@ -1,4 +1,4 @@
-import "../styles/globals.css";
+import "../public/globals.css";
 import Link from "next/link";
 import { Inter } from "@next/font/google";
 import { PrismicProvider } from "@prismicio/react";

@@ -1,8 +1,6 @@
 import React from "react";
 import { PrismicRichText } from "@prismicio/react";
-import styles from "../../styles/home.module.css";
-
-// TODO: Examine styles folder and incorporate them into slices css and vice versa
+import styles from "./featureGrid.module.css";
 
 /**
  * @typedef {import("@prismicio/client").Content.FeatureGridSlice} FeatureGridSlice
