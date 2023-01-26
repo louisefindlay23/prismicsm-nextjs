@@ -2,11 +2,125 @@
   {
     "__TYPE__": "SharedSliceContent",
     "variation": "default",
-    "primary": {},
+    "primary": {
+      "featuretitle": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "Starter"
+      },
+      "featureprice": {
+        "__TYPE__": "FieldContent",
+        "type": "Text",
+        "value": "$20/mth"
+      },
+      "featuretwotitle": {
+        "__TYPE__": "FieldContent",
+        "value": "local",
+        "type": "Text"
+      },
+      "featuretwoprice": {
+        "__TYPE__": "FieldContent",
+        "value": "community",
+        "type": "Text"
+      },
+      "featurethreeprice": {
+        "__TYPE__": "FieldContent",
+        "value": "hunter",
+        "type": "Text"
+      },
+      "featurethreetitle": {
+        "__TYPE__": "FieldContent",
+        "value": "mountain",
+        "type": "Text"
+      }
+    },
     "items": [
       {
         "__TYPE__": "GroupItemContent",
-        "value": []
+        "value": [
+          [
+            "featureitem",
+            {
+              "__TYPE__": "FieldContent",
+              "type": "Text",
+              "value": "API Access"
+            }
+          ],
+          [
+            "featuretwoitem",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "exchange",
+              "type": "Text"
+            }
+          ],
+          [
+            "featurethreeitem",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "promised",
+              "type": "Text"
+            }
+          ]
+        ]
+      },
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "featureitem",
+            {
+              "__TYPE__": "FieldContent",
+              "type": "Text",
+              "value": "Editor Interface"
+            }
+          ],
+          [
+            "featuretwoitem",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "difficult",
+              "type": "Text"
+            }
+          ],
+          [
+            "featurethreeitem",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "father",
+              "type": "Text"
+            }
+          ]
+        ]
+      },
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "featureitem",
+            {
+              "__TYPE__": "FieldContent",
+              "type": "Text",
+              "value": "Community Forum"
+            }
+          ],
+          [
+            "featuretwoitem",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "noted",
+              "type": "Text"
+            }
+          ],
+          [
+            "featurethreeitem",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "hair",
+              "type": "Text"
+            }
+          ]
+        ]
       }
     ]
   }

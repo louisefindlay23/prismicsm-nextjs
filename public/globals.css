@@ -19,3 +19,20 @@ a {
     color: inherit;
     text-decoration: none;
 }
+
+button {
+    width: auto;
+    padding: 1% 2.5%;
+    appearance: none;
+    border-radius: 5px;
+    border: 2px solid white;
+    background: black;
+    color: white;
+    justify-self: center;
+}
+
+button:hover {
+    background: white;
+    color: black;
+    border-color: black;
+}

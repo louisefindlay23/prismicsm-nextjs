@@ -21,22 +21,3 @@
 .heroBck p:last-of-type {
     margin: 2.5% 0;
 }
-
-.heroBck button {
-    width: auto;
-    padding: 1% 2.5%;
-    appearance: none;
-    border-radius: 5px;
-    border: 2px solid white;
-    background: black;
-    color: white;
-    justify-self: center;
-}
-
-.heroBck button:hover {
-    background: white;
-    color: black;
-    border-color: black;
-}
-
-/* TODO: Make Flex utility class to apply to bck and content class or try to combine pos: absolute */

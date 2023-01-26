@@ -1,5 +1,4 @@
 import React from "react";
-import { PrismicRichText } from "@prismicio/react";
 import styles from "./featureGrid.module.css";
 
 /**
@@ -10,12 +9,32 @@ import styles from "./featureGrid.module.css";
 const FeatureGrid = ({ slice }) => (
     <section className={styles.grid}>
         <div className={styles.card}>
-            <h3>Feature Title</h3>
-            <h4>$30/mth</h4>
+            <h3>{slice.primary.featuretitle}</h3>
+            <h4>{slice.primary.featureprice}</h4>
             <ul>
-                <li>Feature 1</li>
-                <li>Feature 2</li>
-                <li>Feature 3</li>
+                {slice?.items?.map((item, i) => (
+                    <li>{item.featureitem}</li>
+                ))}
+            </ul>
+            <button>Buy Now</button>
+        </div>
+        <div className={styles.card}>
+            <h3>{slice.primary.featuretwotitle}</h3>
+            <h4>{slice.primary.featuretwoprice}</h4>
+            <ul>
+                {slice?.items?.map((item, i) => (
+                    <li>{item.featuretwoitem}</li>
+                ))}
+            </ul>
+            <button>Buy Now</button>
+        </div>
+        <div className={styles.card}>
+            <h3>{slice.primary.featurethreetitle}</h3>
+            <h4>{slice.primary.featurethreeprice}</h4>
+            <ul>
+                {slice?.items?.map((item, i) => (
+                    <li>{item.featurethreeitem}</li>
+                ))}
             </ul>
             <button>Buy Now</button>
         </div>

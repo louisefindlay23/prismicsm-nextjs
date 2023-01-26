@@ -10,8 +10,73 @@
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
       "description": "FeatureGrid",
-      "primary": {},
-      "items": {},
+      "primary": {
+        "featuretitle": {
+          "type": "Text",
+          "config": {
+            "label": "FeatureTitle",
+            "placeholder": ""
+          }
+        },
+        "featureprice": {
+          "type": "Text",
+          "config": {
+            "label": "FeaturePrice",
+            "placeholder": ""
+          }
+        },
+        "featuretwotitle": {
+          "type": "Text",
+          "config": {
+            "label": "FeatureTwoTitle",
+            "placeholder": ""
+          }
+        },
+        "featuretwoprice": {
+          "type": "Text",
+          "config": {
+            "label": "FeatureTwoPrice",
+            "placeholder": ""
+          }
+        },
+        "featurethreetitle": {
+          "type": "Text",
+          "config": {
+            "label": "FeatureThreeTitle",
+            "placeholder": ""
+          }
+        },
+        "featurethreeprice": {
+          "type": "Text",
+          "config": {
+            "label": "FeatureThreePrice",
+            "placeholder": ""
+          }
+        }
+      },
+      "items": {
+        "featureitem": {
+          "type": "Text",
+          "config": {
+            "label": "FeatureItem",
+            "placeholder": ""
+          }
+        },
+        "featuretwoitem": {
+          "type": "Text",
+          "config": {
+            "label": "FeatureTwoItem",
+            "placeholder": ""
+          }
+        },
+        "featurethreeitem": {
+          "type": "Text",
+          "config": {
+            "label": "FeatureThreeItem",
+            "placeholder": ""
+          }
+        }
+      },
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]

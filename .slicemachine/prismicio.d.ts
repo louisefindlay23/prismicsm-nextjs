@@ -37,6 +37,108 @@ type HomeDocumentDataSlicesSlice = HeaderSlice | TestSlice | FeatureGridSlice;
 export type HomeDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<HomeDocumentData>, "home", Lang>;
 export type AllDocumentTypes = HomeDocument;
 /**
+ * Primary content in FeatureGrid → Primary
+ *
+ */
+interface FeatureGridSliceDefaultPrimary {
+    /**
+     * FeatureTitle field in *FeatureGrid → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: feature_grid.primary.featuretitle
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    featuretitle: prismicT.KeyTextField;
+    /**
+     * FeaturePrice field in *FeatureGrid → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: feature_grid.primary.featureprice
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    featureprice: prismicT.KeyTextField;
+    /**
+     * FeatureTwoTitle field in *FeatureGrid → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: feature_grid.primary.featuretwotitle
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    featuretwotitle: prismicT.KeyTextField;
+    /**
+     * FeatureTwoPrice field in *FeatureGrid → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: feature_grid.primary.featuretwoprice
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    featuretwoprice: prismicT.KeyTextField;
+    /**
+     * FeatureThreeTitle field in *FeatureGrid → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: feature_grid.primary.featurethreetitle
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    featurethreetitle: prismicT.KeyTextField;
+    /**
+     * FeatureThreePrice field in *FeatureGrid → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: feature_grid.primary.featurethreeprice
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    featurethreeprice: prismicT.KeyTextField;
+}
+/**
+ * Item in FeatureGrid → Items
+ *
+ */
+export interface FeatureGridSliceDefaultItem {
+    /**
+     * FeatureItem field in *FeatureGrid → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: feature_grid.items[].featureitem
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    featureitem: prismicT.KeyTextField;
+    /**
+     * FeatureTwoItem field in *FeatureGrid → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: feature_grid.items[].featuretwoitem
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    featuretwoitem: prismicT.KeyTextField;
+    /**
+     * FeatureThreeItem field in *FeatureGrid → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: feature_grid.items[].featurethreeitem
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    featurethreeitem: prismicT.KeyTextField;
+}
+/**
  * Default variation for FeatureGrid Slice
  *
  * - **API ID**: `default`
@@ -44,7 +146,7 @@ export type AllDocumentTypes = HomeDocument;
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type FeatureGridSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, never>;
+export type FeatureGridSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<FeatureGridSliceDefaultPrimary>, Simplify<FeatureGridSliceDefaultItem>>;
 /**
  * Slice variation for *FeatureGrid*
  *
@@ -208,6 +310,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, AllDocumentTypes, FeatureGridSliceDefault, FeatureGridSliceVariation, FeatureGridSlice, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, TestSliceDefaultPrimary, TestSliceDefault, TestSliceVariation, TestSlice };
+        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, AllDocumentTypes, FeatureGridSliceDefaultPrimary, FeatureGridSliceDefaultItem, FeatureGridSliceDefault, FeatureGridSliceVariation, FeatureGridSlice, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, TestSliceDefaultPrimary, TestSliceDefault, TestSliceVariation, TestSlice };
     }
 }

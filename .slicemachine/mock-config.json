@@ -16,7 +16,8 @@
     },
     "FeatureGrid": {
       "default": {
-        "primary": {}
+        "primary": {},
+        "items": {}
       }
     }
   }
