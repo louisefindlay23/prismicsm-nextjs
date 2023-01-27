@@ -2,13 +2,11 @@
 
 .header {
     position: relative;
-    background: var(--os-primary-color);
     border-bottom: 3.5px solid black;
 }
 
 .header a {
     font-size: 1.25rem;
-    color: var(--os-secondary-color);
     text-decoration: none;
 }
 

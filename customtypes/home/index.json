@@ -25,6 +25,9 @@
             },
             "feature_grid": {
               "type": "SharedSlice"
+            },
+            "footer": {
+              "type": "SharedSlice"
             }
           }
         }
