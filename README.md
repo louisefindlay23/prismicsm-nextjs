@@ -1,6 +1,8 @@
-First Prismic Next.js website with SM.
+## Basic Prismic Next.js Starter using Slice Machine
 
-## Getting Started
+### Purpose
+
+Developing a basic homepage with mock content to learn how to use Prismic's Slice Machine with Next.js.
 
 First, run the development server:
 

@@ -12,8 +12,10 @@ import { PrismicLink } from "@prismicio/react";
  */
 const Header = ({ slice }) => (
     <section>
+        {/* Header */}
         <header className={styles.header}>
             <div className={styles.wrapper}>
+                {/* Logo Link */}
                 <div className={styles.logo}>
                     <Link href="/">
                         <Image
@@ -24,9 +26,11 @@ const Header = ({ slice }) => (
                         />
                     </Link>
                 </div>
+                {/* Title Link */}
                 <Link className={styles.title} href="#">
                     <PrismicRichText field={slice.primary.title} />
                 </Link>
+                {/* Nav */}
                 <nav className={styles.nav}>
                     <ul>
                         {slice?.items?.map((item, i) => (

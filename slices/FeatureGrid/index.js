@@ -8,9 +8,11 @@ import styles from "./featureGrid.module.css";
  */
 const FeatureGrid = ({ slice }) => (
     <section className={styles.grid}>
+        {/* Single Card */}
         <div className={styles.card}>
             <h3>{slice.primary.featuretitle}</h3>
             <h4>{slice.primary.featureprice}</h4>
+            {/* Features List */}
             <ul>
                 {slice?.items?.map((item, i) => (
                     <li>{item.featureitem}</li>
@@ -18,6 +20,7 @@ const FeatureGrid = ({ slice }) => (
             </ul>
             <button>Buy Now</button>
         </div>
+        {/* Other Cards */}
         <div className={styles.card}>
             <h3>{slice.primary.featuretwotitle}</h3>
             <h4>{slice.primary.featuretwoprice}</h4>
