@@ -37,145 +37,20 @@ type HomeDocumentDataSlicesSlice = HeaderSlice | TestSlice | FeatureGridSlice | 
 export type HomeDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<HomeDocumentData>, "home", Lang>;
 export type AllDocumentTypes = HomeDocument;
 /**
- * Primary content in FeatureGrid → Primary
- *
- */
-interface FeatureGridSliceDefaultPrimary {
-    /**
-     * FeatureTitle field in *FeatureGrid → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: feature_grid.primary.featuretitle
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    featuretitle: prismicT.KeyTextField;
-    /**
-     * FeaturePrice field in *FeatureGrid → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: feature_grid.primary.featureprice
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    featureprice: prismicT.KeyTextField;
-    /**
-     * FeatureTwoTitle field in *FeatureGrid → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: feature_grid.primary.featuretwotitle
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    featuretwotitle: prismicT.KeyTextField;
-    /**
-     * FeatureTwoPrice field in *FeatureGrid → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: feature_grid.primary.featuretwoprice
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    featuretwoprice: prismicT.KeyTextField;
-    /**
-     * FeatureThreeTitle field in *FeatureGrid → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: feature_grid.primary.featurethreetitle
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    featurethreetitle: prismicT.KeyTextField;
-    /**
-     * FeatureThreePrice field in *FeatureGrid → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: feature_grid.primary.featurethreeprice
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    featurethreeprice: prismicT.KeyTextField;
-}
-/**
- * Item in FeatureGrid → Items
- *
- */
-export interface FeatureGridSliceDefaultItem {
-    /**
-     * FeatureItem field in *FeatureGrid → Items*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: feature_grid.items[].featureitem
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    featureitem: prismicT.KeyTextField;
-    /**
-     * FeatureTwoItem field in *FeatureGrid → Items*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: feature_grid.items[].featuretwoitem
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    featuretwoitem: prismicT.KeyTextField;
-    /**
-     * FeatureThreeItem field in *FeatureGrid → Items*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: feature_grid.items[].featurethreeitem
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    featurethreeitem: prismicT.KeyTextField;
-}
-/**
- * Default variation for FeatureGrid Slice
- *
- * - **API ID**: `default`
- * - **Description**: `FeatureGrid`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type FeatureGridSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<FeatureGridSliceDefaultPrimary>, Simplify<FeatureGridSliceDefaultItem>>;
-/**
- * Slice variation for *FeatureGrid*
- *
- */
-type FeatureGridSliceVariation = FeatureGridSliceDefault;
-/**
- * FeatureGrid Shared Slice
- *
- * - **API ID**: `feature_grid`
- * - **Description**: `FeatureGrid`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type FeatureGridSlice = prismicT.SharedSlice<"feature_grid", FeatureGridSliceVariation>;
-/**
  * Primary content in Footer → Primary
  *
  */
 interface FooterSliceDefaultPrimary {
     /**
-     * Copyright field in *Footer → Primary*
+     * Copyright Statement field in *Footer → Primary*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: footer.primary.copyright
+     * - **API ID Path**: footer.primary.copyright_statement
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    copyright: prismicT.KeyTextField;
+    copyright_statement: prismicT.KeyTextField;
 }
 /**
  * Default variation for Footer Slice
@@ -232,25 +107,25 @@ interface HeaderSliceDefaultPrimary {
  */
 export interface HeaderSliceDefaultItem {
     /**
-     * NavLinks field in *Header → Items*
+     * Navigation Links field in *Header → Items*
      *
      * - **Field Type**: Link
      * - **Placeholder**: *None*
-     * - **API ID Path**: header.items[].navlinks
+     * - **API ID Path**: header.items[].navigation_links
      * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
      *
      */
-    navlinks: prismicT.LinkField;
+    navigation_links: prismicT.LinkField;
     /**
-     * NavTitle field in *Header → Items*
+     * Navigation Text field in *Header → Items*
      *
-     * - **Field Type**: Text
+     * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: header.items[].navtitle
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     * - **API ID Path**: header.items[].navigation_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    navtitle: prismicT.KeyTextField;
+    navigation_text: prismicT.RichTextField;
 }
 /**
  * Default variation for Header Slice
@@ -281,45 +156,45 @@ export type HeaderSlice = prismicT.SharedSlice<"header", HeaderSliceVariation>;
  */
 interface TestSliceDefaultPrimary {
     /**
-     * heroImage field in *Hero → Primary*
+     * Hero Image field in *Hero → Primary*
      *
      * - **Field Type**: Image
      * - **Placeholder**: *None*
-     * - **API ID Path**: test.primary.heroimage
+     * - **API ID Path**: test.primary.hero_image
      * - **Documentation**: https://prismic.io/docs/core-concepts/image
      *
      */
-    heroimage: prismicT.ImageField<never>;
+    hero_image: prismicT.ImageField<never>;
     /**
-     * heroHeading field in *Hero → Primary*
+     * Hero Heading field in *Hero → Primary*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: test.primary.heroheading
+     * - **API ID Path**: test.primary.hero_heading
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    heroheading: prismicT.KeyTextField;
+    hero_heading: prismicT.KeyTextField;
     /**
-     * heroRichText field in *Hero → Primary*
+     * Hero Text field in *Hero → Primary*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: test.primary.herorichtext
+     * - **API ID Path**: test.primary.hero_text
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    herorichtext: prismicT.RichTextField;
+    hero_text: prismicT.RichTextField;
     /**
-     * heroButtonText field in *Hero → Primary*
+     * Hero Button Text field in *Hero → Primary*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: test.primary.herobuttontext
+     * - **API ID Path**: test.primary.hero_button_text
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    herobuttontext: prismicT.KeyTextField;
+    hero_button_text: prismicT.KeyTextField;
 }
 /**
  * Default variation for Hero Slice
@@ -344,11 +219,136 @@ type TestSliceVariation = TestSliceDefault;
  *
  */
 export type TestSlice = prismicT.SharedSlice<"test", TestSliceVariation>;
+/**
+ * Primary content in PlanGrid → Primary
+ *
+ */
+interface FeatureGridSliceDefaultPrimary {
+    /**
+     * Plan Title field in *PlanGrid → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: feature_grid.primary.plan_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    plan_title: prismicT.KeyTextField;
+    /**
+     * Plan Price field in *PlanGrid → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: feature_grid.primary.plan_price
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    plan_price: prismicT.KeyTextField;
+    /**
+     * Plan Two Title field in *PlanGrid → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: feature_grid.primary.plan_two_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    plan_two_title: prismicT.KeyTextField;
+    /**
+     * Plan Two Price field in *PlanGrid → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: feature_grid.primary.plan_two_price
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    plan_two_price: prismicT.KeyTextField;
+    /**
+     * Plan Three Title field in *PlanGrid → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: feature_grid.primary.plan_three_title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    plan_three_title: prismicT.KeyTextField;
+    /**
+     * Plan Three Price field in *PlanGrid → Primary*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: feature_grid.primary.plan_three_price
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    plan_three_price: prismicT.KeyTextField;
+}
+/**
+ * Item in PlanGrid → Items
+ *
+ */
+export interface FeatureGridSliceDefaultItem {
+    /**
+     * Plan Items field in *PlanGrid → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: feature_grid.items[].plan_items
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    plan_items: prismicT.KeyTextField;
+    /**
+     * Plan Two Items field in *PlanGrid → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: feature_grid.items[].plan_two_items
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    plan_two_items: prismicT.KeyTextField;
+    /**
+     * Plan Three Items field in *PlanGrid → Items*
+     *
+     * - **Field Type**: Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: feature_grid.items[].plan_three_items
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     *
+     */
+    plan_three_items: prismicT.KeyTextField;
+}
+/**
+ * Default variation for PlanGrid Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `FeatureGrid`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FeatureGridSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<FeatureGridSliceDefaultPrimary>, Simplify<FeatureGridSliceDefaultItem>>;
+/**
+ * Slice variation for *PlanGrid*
+ *
+ */
+type FeatureGridSliceVariation = FeatureGridSliceDefault;
+/**
+ * PlanGrid Shared Slice
+ *
+ * - **API ID**: `feature_grid`
+ * - **Description**: `FeatureGrid`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FeatureGridSlice = prismicT.SharedSlice<"feature_grid", FeatureGridSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, AllDocumentTypes, FeatureGridSliceDefaultPrimary, FeatureGridSliceDefaultItem, FeatureGridSliceDefault, FeatureGridSliceVariation, FeatureGridSlice, FooterSliceDefaultPrimary, FooterSliceDefault, FooterSliceVariation, FooterSlice, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, TestSliceDefaultPrimary, TestSliceDefault, TestSliceVariation, TestSlice };
+        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, AllDocumentTypes, FooterSliceDefaultPrimary, FooterSliceDefault, FooterSliceVariation, FooterSlice, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, TestSliceDefaultPrimary, TestSliceDefault, TestSliceVariation, TestSlice, FeatureGridSliceDefaultPrimary, FeatureGridSliceDefaultItem, FeatureGridSliceDefault, FeatureGridSliceVariation, FeatureGridSlice };
     }
 }

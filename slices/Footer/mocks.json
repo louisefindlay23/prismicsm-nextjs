@@ -3,9 +3,9 @@
     "__TYPE__": "SharedSliceContent",
     "variation": "default",
     "primary": {
-      "copyright": {
+      "copyright_statement": {
         "__TYPE__": "FieldContent",
-        "value": "satellites",
+        "value": "function",
         "type": "Text"
       }
     },

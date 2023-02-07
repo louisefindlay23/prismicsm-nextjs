@@ -5,7 +5,8 @@
   "slices": {
     "Header": {
       "default": {
-        "primary": {}
+        "primary": {},
+        "items": {}
       }
     },
     "Test": {},
@@ -23,6 +24,12 @@
     "Footer": {
       "default": {
         "primary": {}
+      }
+    },
+    "PlanGrid": {
+      "default": {
+        "primary": {},
+        "items": {}
       }
     }
   }

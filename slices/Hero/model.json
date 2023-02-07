@@ -11,34 +11,34 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Test",
       "primary": {
-        "heroimage": {
+        "hero_image": {
           "type": "Image",
           "config": {
-            "label": "heroImage",
+            "label": "Hero Image",
             "constraint": {},
             "thumbnails": []
           }
         },
-        "heroheading": {
+        "hero_heading": {
           "type": "Text",
           "config": {
-            "label": "heroHeading",
+            "label": "Hero Heading",
             "placeholder": ""
           }
         },
-        "herorichtext": {
+        "hero_text": {
           "type": "StructuredText",
           "config": {
-            "label": "heroRichText",
+            "label": "Hero Text",
             "placeholder": "",
             "allowTargetBlank": true,
             "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
           }
         },
-        "herobuttontext": {
+        "hero_button_text": {
           "type": "Text",
           "config": {
-            "label": "heroButtonText",
+            "label": "Hero Button Text",
             "placeholder": ""
           }
         }

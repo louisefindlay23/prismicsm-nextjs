@@ -3,34 +3,34 @@
     "__TYPE__": "SharedSliceContent",
     "variation": "default",
     "primary": {
-      "featuretitle": {
+      "plan_title": {
         "__TYPE__": "FieldContent",
-        "type": "Text",
-        "value": "Starter"
-      },
-      "featureprice": {
-        "__TYPE__": "FieldContent",
-        "type": "Text",
-        "value": "$20/mth"
-      },
-      "featuretwotitle": {
-        "__TYPE__": "FieldContent",
-        "value": "local",
+        "value": "period",
         "type": "Text"
       },
-      "featuretwoprice": {
+      "plan_price": {
         "__TYPE__": "FieldContent",
-        "value": "community",
+        "value": "hospital",
         "type": "Text"
       },
-      "featurethreeprice": {
+      "plan_two_title": {
         "__TYPE__": "FieldContent",
-        "value": "hunter",
+        "value": "ask",
         "type": "Text"
       },
-      "featurethreetitle": {
+      "plan_two_price": {
         "__TYPE__": "FieldContent",
-        "value": "mountain",
+        "value": "breathe",
+        "type": "Text"
+      },
+      "plan_three_title": {
+        "__TYPE__": "FieldContent",
+        "value": "observe",
+        "type": "Text"
+      },
+      "plan_three_price": {
+        "__TYPE__": "FieldContent",
+        "value": "again",
         "type": "Text"
       }
     },
@@ -39,55 +39,26 @@
         "__TYPE__": "GroupItemContent",
         "value": [
           [
-            "featureitem",
+            "plan_items",
             {
               "__TYPE__": "FieldContent",
-              "type": "Text",
-              "value": "API Access"
-            }
-          ],
-          [
-            "featuretwoitem",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "exchange",
+              "value": "seldom",
               "type": "Text"
             }
           ],
           [
-            "featurethreeitem",
+            "plan_two_items",
             {
               "__TYPE__": "FieldContent",
-              "value": "promised",
-              "type": "Text"
-            }
-          ]
-        ]
-      },
-      {
-        "__TYPE__": "GroupItemContent",
-        "value": [
-          [
-            "featureitem",
-            {
-              "__TYPE__": "FieldContent",
-              "type": "Text",
-              "value": "Editor Interface"
-            }
-          ],
-          [
-            "featuretwoitem",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "difficult",
+              "value": "involved",
               "type": "Text"
             }
           ],
           [
-            "featurethreeitem",
+            "plan_three_items",
             {
               "__TYPE__": "FieldContent",
-              "value": "father",
+              "value": "store",
               "type": "Text"
             }
           ]
@@ -97,26 +68,55 @@
         "__TYPE__": "GroupItemContent",
         "value": [
           [
-            "featureitem",
+            "plan_items",
             {
               "__TYPE__": "FieldContent",
-              "type": "Text",
-              "value": "Community Forum"
-            }
-          ],
-          [
-            "featuretwoitem",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "noted",
+              "value": "solid",
               "type": "Text"
             }
           ],
           [
-            "featurethreeitem",
+            "plan_two_items",
             {
               "__TYPE__": "FieldContent",
-              "value": "hair",
+              "value": "they",
+              "type": "Text"
+            }
+          ],
+          [
+            "plan_three_items",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "quarter",
+              "type": "Text"
+            }
+          ]
+        ]
+      },
+      {
+        "__TYPE__": "GroupItemContent",
+        "value": [
+          [
+            "plan_items",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "hardly",
+              "type": "Text"
+            }
+          ],
+          [
+            "plan_two_items",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "replace",
+              "type": "Text"
+            }
+          ],
+          [
+            "plan_three_items",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "machinery",
               "type": "Text"
             }
           ]

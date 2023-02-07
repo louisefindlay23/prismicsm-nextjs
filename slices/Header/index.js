@@ -34,9 +34,10 @@ const Header = ({ slice }) => (
                 <nav className={styles.nav}>
                     <ul>
                         {slice?.items?.map((item, i) => (
-                            <li key={i}>
-                                <PrismicLink field={item.navlinks}>
-                                    {item.navtitle}
+                            <li>
+                                <PrismicLink field={item.navigation_links}>
+                                    {/* TODO: How to Nest Prismic Rich Text for
+                                    link text*/}
                                 </PrismicLink>
                             </li>
                         ))}

@@ -9,7 +9,7 @@ import styles from "./footer.module.css";
 const Footer = ({ slice }) => (
     <section>
         <footer className={styles.footer}>
-            <p>{slice.primary.copyright}</p>
+            <p>{slice.primary.copyright_statement}</p>
         </footer>
     </section>
 );

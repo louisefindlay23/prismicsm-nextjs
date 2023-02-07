@@ -29,19 +29,22 @@
         }
       },
       "items": {
-        "navlinks": {
+        "navigation_links": {
           "type": "Link",
           "config": {
-            "label": "NavLinks",
+            "label": "Navigation Links",
             "placeholder": "",
+            "allowTargetBlank": false,
             "select": null
           }
         },
-        "navtitle": {
-          "type": "Text",
+        "navigation_text": {
+          "type": "StructuredText",
           "config": {
-            "label": "NavTitle",
-            "placeholder": ""
+            "label": "Navigation Text",
+            "placeholder": "",
+            "allowTargetBlank": false,
+            "single": "paragraph"
           }
         }
       },

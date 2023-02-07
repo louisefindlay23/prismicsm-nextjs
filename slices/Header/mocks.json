@@ -9,7 +9,7 @@
           {
             "type": "heading1",
             "content": {
-              "text": "Supply"
+              "text": "Herself"
             }
           }
         ]
@@ -17,13 +17,13 @@
       "logo": {
         "origin": {
           "id": "main",
-          "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
-          "width": 4172,
-          "height": 4000
+          "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
+          "width": 3168,
+          "height": 4752
         },
-        "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
-        "width": 4172,
-        "height": 4000,
+        "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
+        "width": 3168,
+        "height": 4752,
         "edit": {
           "zoom": 1,
           "crop": {
@@ -43,21 +43,27 @@
         "__TYPE__": "GroupItemContent",
         "value": [
           [
-            "navlinks",
+            "navigation_links",
             {
               "__TYPE__": "LinkContent",
               "value": {
                 "__TYPE__": "ExternalLink",
-                "url": "https://prismic.io"
+                "url": "http://google.com"
               }
             }
           ],
           [
-            "navtitle",
+            "navigation_text",
             {
-              "__TYPE__": "FieldContent",
-              "value": "regular",
-              "type": "Text"
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Anim duis amet nulla officia."
+                  }
+                }
+              ]
             }
           ]
         ]

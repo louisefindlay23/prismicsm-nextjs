@@ -10,33 +10,33 @@ const FeatureGrid = ({ slice }) => (
     <section className={styles.grid}>
         {/* Single Card */}
         <div className={styles.card}>
-            <h3>{slice.primary.featuretitle}</h3>
-            <h4>{slice.primary.featureprice}</h4>
+            <h3>{slice.primary.plan_title}</h3>
+            <h4>{slice.primary.plan_price}/mth</h4>
             {/* Features List */}
             <ul>
                 {slice?.items?.map((item, i) => (
-                    <li>{item.featureitem}</li>
+                    <li>{item.plan_items}</li>
                 ))}
             </ul>
             <button>Buy Now</button>
         </div>
         {/* Other Cards */}
         <div className={styles.card}>
-            <h3>{slice.primary.featuretwotitle}</h3>
-            <h4>{slice.primary.featuretwoprice}</h4>
+            <h3>{slice.primary.plan_two_title}</h3>
+            <h4>{slice.primary.plan_two_price}/mth</h4>
             <ul>
                 {slice?.items?.map((item, i) => (
-                    <li>{item.featuretwoitem}</li>
+                    <li>{item.plan_two_items}</li>
                 ))}
             </ul>
             <button>Buy Now</button>
         </div>
         <div className={styles.card}>
-            <h3>{slice.primary.featurethreetitle}</h3>
-            <h4>{slice.primary.featurethreeprice}</h4>
+            <h3>{slice.primary.plan_three_title}</h3>
+            <h4>{slice.primary.plan_three_price}/mth</h4>
             <ul>
                 {slice?.items?.map((item, i) => (
-                    <li>{item.featurethreeitem}</li>
+                    <li>{item.plan_three_items}</li>
                 ))}
             </ul>
             <button>Buy Now</button>

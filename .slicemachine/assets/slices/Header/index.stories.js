@@ -5,5 +5,5 @@ export default {
 }
 
 
-export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"navlinks":{"link_type":"Web","url":"https://prismic.io"},"navtitle":"regular"}],"primary":{"title":[{"type":"heading1","text":"Supply","spans":[]}],"logo":{"dimensions":{"width":4172,"height":4000},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1586952518485-11b180e92764"}},"id":"_Default","slice_type":"header"}} />
+export const _Default = () => <MyComponent slice={{"variation":"default","version":"sktwi1xtmkfgx8626","items":[{"navigation_links":{"link_type":"Web","url":"http://google.com"},"navigation_text":[{"type":"paragraph","text":"Anim duis amet nulla officia.","spans":[]}]}],"primary":{"title":[{"type":"heading1","text":"Herself","spans":[]}],"logo":{"dimensions":{"width":3168,"height":4752},"alt":null,"copyright":null,"url":"https://images.unsplash.com/photo-1589321599763-d66926c29613"}},"id":"_Default","slice_type":"header"}} />
 _Default.storyName = ''

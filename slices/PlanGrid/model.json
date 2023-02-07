@@ -1,7 +1,7 @@
 {
   "id": "feature_grid",
   "type": "SharedSlice",
-  "name": "FeatureGrid",
+  "name": "PlanGrid",
   "description": "FeatureGrid",
   "variations": [
     {
@@ -11,68 +11,68 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "FeatureGrid",
       "primary": {
-        "featuretitle": {
+        "plan_title": {
           "type": "Text",
           "config": {
-            "label": "FeatureTitle",
+            "label": "Plan Title",
             "placeholder": ""
           }
         },
-        "featureprice": {
+        "plan_price": {
           "type": "Text",
           "config": {
-            "label": "FeaturePrice",
+            "label": "Plan Price",
             "placeholder": ""
           }
         },
-        "featuretwotitle": {
+        "plan_two_title": {
           "type": "Text",
           "config": {
-            "label": "FeatureTwoTitle",
+            "label": "Plan Two Title",
             "placeholder": ""
           }
         },
-        "featuretwoprice": {
+        "plan_two_price": {
           "type": "Text",
           "config": {
-            "label": "FeatureTwoPrice",
+            "label": "Plan Two Price",
             "placeholder": ""
           }
         },
-        "featurethreetitle": {
+        "plan_three_title": {
           "type": "Text",
           "config": {
-            "label": "FeatureThreeTitle",
+            "label": "Plan Three Title",
             "placeholder": ""
           }
         },
-        "featurethreeprice": {
+        "plan_three_price": {
           "type": "Text",
           "config": {
-            "label": "FeatureThreePrice",
+            "label": "Plan Three Price",
             "placeholder": ""
           }
         }
       },
       "items": {
-        "featureitem": {
+        "plan_items": {
           "type": "Text",
           "config": {
-            "label": "FeatureItem",
+            "label": "Plan Items",
             "placeholder": ""
           }
         },
-        "featuretwoitem": {
+        "plan_two_items": {
           "type": "Text",
           "config": {
-            "label": "FeatureTwoItem",
+            "label": "Plan Two Items",
             "placeholder": ""
           }
         },
-        "featurethreeitem": {
+        "plan_three_items": {
           "type": "Text",
           "config": {
-            "label": "FeatureThreeItem",
+            "label": "Plan Three Items",
             "placeholder": ""
           }
         }
