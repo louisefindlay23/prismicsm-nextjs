@@ -9,7 +9,9 @@ import styles from "./footer.module.css";
 const Footer = ({ slice }) => (
     <section>
         <footer className={styles.footer}>
-            <p>{slice.primary.copyright_statement}</p>
+            <p>
+                © {new Date().getFullYear()} {slice.primary.site_author}
+            </p>
         </footer>
     </section>
 );

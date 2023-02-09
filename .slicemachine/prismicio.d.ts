@@ -64,15 +64,15 @@ export type AllDocumentTypes = HomeDocument;
  */
 interface FooterSliceDefaultPrimary {
     /**
-     * Copyright Statement field in *Footer → Primary*
+     * Site Author field in *Footer → Primary*
      *
      * - **Field Type**: Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: footer.primary.copyright_statement
+     * - **API ID Path**: footer.primary.site_author
      * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    copyright_statement: prismicT.KeyTextField;
+    site_author: prismicT.KeyTextField;
 }
 /**
  * Default variation for Footer Slice

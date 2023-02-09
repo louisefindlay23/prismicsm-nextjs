@@ -11,10 +11,10 @@
       "version": "sktwi1xtmkfgx8626",
       "description": "Footer",
       "primary": {
-        "copyright_statement": {
+        "site_author": {
           "type": "Text",
           "config": {
-            "label": "Copyright Statement",
+            "label": "Site Author",
             "placeholder": ""
           }
         }
