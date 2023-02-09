@@ -15,7 +15,7 @@ const FeatureGrid = ({ slice }) => (
             {/* Features List */}
             <ul>
                 {slice?.items?.map((item, i) => (
-                    <li>{item.plan_items}</li>
+                    <li key={JSON.stringify(item)}>{item.plan_items}</li>
                 ))}
             </ul>
             <button>Buy Now</button>
@@ -26,7 +26,7 @@ const FeatureGrid = ({ slice }) => (
             <h4>{slice.primary.plan_two_price}/mth</h4>
             <ul>
                 {slice?.items?.map((item, i) => (
-                    <li>{item.plan_two_items}</li>
+                    <li key={JSON.stringify(item)}>{item.plan_two_items}</li>
                 ))}
             </ul>
             <button>Buy Now</button>
@@ -36,7 +36,7 @@ const FeatureGrid = ({ slice }) => (
             <h4>{slice.primary.plan_three_price}/mth</h4>
             <ul>
                 {slice?.items?.map((item, i) => (
-                    <li>{item.plan_three_items}</li>
+                    <li key={JSON.stringify(item)}>{item.plan_three_items}</li>
                 ))}
             </ul>
             <button>Buy Now</button>

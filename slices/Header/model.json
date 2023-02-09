@@ -39,12 +39,10 @@
           }
         },
         "navigation_text": {
-          "type": "StructuredText",
+          "type": "Text",
           "config": {
             "label": "Navigation Text",
-            "placeholder": "",
-            "allowTargetBlank": false,
-            "single": "paragraph"
+            "placeholder": ""
           }
         }
       },

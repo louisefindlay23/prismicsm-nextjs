@@ -55,15 +55,9 @@
           [
             "navigation_text",
             {
-              "__TYPE__": "StructuredTextContent",
-              "value": [
-                {
-                  "type": "paragraph",
-                  "content": {
-                    "text": "Anim duis amet nulla officia."
-                  }
-                }
-              ]
+              "__TYPE__": "FieldContent",
+              "value": "city",
+              "type": "Text"
             }
           ]
         ]

@@ -119,13 +119,13 @@ export interface HeaderSliceDefaultItem {
     /**
      * Navigation Text field in *Header → Items*
      *
-     * - **Field Type**: Rich Text
+     * - **Field Type**: Text
      * - **Placeholder**: *None*
      * - **API ID Path**: header.items[].navigation_text
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
      *
      */
-    navigation_text: prismicT.RichTextField;
+    navigation_text: prismicT.KeyTextField;
 }
 /**
  * Default variation for Header Slice

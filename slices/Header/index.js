@@ -33,14 +33,16 @@ const Header = ({ slice }) => (
                 {/* Nav */}
                 <nav className={styles.nav}>
                     <ul>
-                        {slice?.items?.map((item, i) => (
-                            <li>
-                                <PrismicLink field={item.navigation_links}>
-                                    {/* TODO: How to Nest Prismic Rich Text for
-                                    link text*/}
-                                </PrismicLink>
-                            </li>
-                        ))}
+                        {slice?.items?.map((item, i) => {
+                            return (
+                                <li key={JSON.stringify(item)}>
+                                    <PrismicLink field={item.navigation_links}>
+                                        {/* TODO: Can't use Rich Text here  */}
+                                        {item.navigation_text}
+                                    </PrismicLink>
+                                </li>
+                            );
+                        })}
                     </ul>
                 </nav>
             </div>
