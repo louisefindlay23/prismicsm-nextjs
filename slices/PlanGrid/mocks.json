@@ -15,15 +15,9 @@
         ]
       },
       "plan_price": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "heading4",
-            "content": {
-              "text": "Suddenly"
-            }
-          }
-        ]
+        "__TYPE__": "FieldContent",
+        "value": "32",
+        "type": "Number"
       },
       "plan_features": {
         "__TYPE__": "StructuredTextContent",
@@ -48,15 +42,9 @@
         ]
       },
       "plan_two_price": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "heading4",
-            "content": {
-              "text": "Radio"
-            }
-          }
-        ]
+        "__TYPE__": "FieldContent",
+        "value": "26",
+        "type": "Number"
       },
       "plan_two_features": {
         "__TYPE__": "StructuredTextContent",
@@ -80,17 +68,6 @@
           }
         ]
       },
-      "plan_three_price": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "heading3",
-            "content": {
-              "text": "Breath"
-            }
-          }
-        ]
-      },
       "plan_three_features": {
         "__TYPE__": "StructuredTextContent",
         "value": [
@@ -101,6 +78,11 @@
             }
           }
         ]
+      },
+      "feature_three_price": {
+        "__TYPE__": "FieldContent",
+        "value": "94",
+        "type": "Number"
       }
     },
     "items": [

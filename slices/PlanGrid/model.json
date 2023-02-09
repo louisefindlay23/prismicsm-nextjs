@@ -21,12 +21,10 @@
           }
         },
         "plan_price": {
-          "type": "StructuredText",
+          "type": "Number",
           "config": {
             "label": "Plan Price",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "heading4"
+            "placeholder": ""
           }
         },
         "plan_features": {
@@ -48,12 +46,10 @@
           }
         },
         "plan_two_price": {
-          "type": "StructuredText",
+          "type": "Number",
           "config": {
             "label": "Plan Two Price",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "heading4"
+            "placeholder": ""
           }
         },
         "plan_two_features": {
@@ -74,13 +70,11 @@
             "single": "heading4"
           }
         },
-        "plan_three_price": {
-          "type": "StructuredText",
+        "feature_three_price": {
+          "type": "Number",
           "config": {
-            "label": "Plan Three Price",
-            "placeholder": "",
-            "allowTargetBlank": true,
-            "single": "heading3"
+            "label": "Feature Three Price",
+            "placeholder": ""
           }
         },
         "plan_three_features": {

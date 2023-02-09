@@ -18,21 +18,22 @@ const Header = ({ slice }) => (
                 {/* Logo Link */}
                 <div className={styles.logo}>
                     <Link href="/">
-                        <Image
-                            src={slice.primary.logo.url}
-                            alt={slice.primary.logo.alt}
+                        {/* <Image
+                            src={data.site_logo.url}
+                            alt={data.site_logo.alt}
                             width={100}
                             height={100}
-                        />
+/> */}
                     </Link>
                 </div>
                 {/* Title Link */}
                 <Link className={styles.title} href="#">
-                    <PrismicRichText field={slice.primary.title} />
+                    {/* <PrismicRichText field={data.site_title} /> */}
                 </Link>
                 {/* Nav */}
                 <nav className={styles.nav}>
                     <ul>
+                        {/* TODO: Can't use repeatalbe zone for links */}
                         {slice?.items?.map((item, i) => {
                             return (
                                 <li key={JSON.stringify(item)}>

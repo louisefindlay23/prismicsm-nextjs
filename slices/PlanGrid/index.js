@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./planGrid.module.css";
 import { PrismicRichText } from "@prismicio/react";
+import { Currency } from "react-intl-number-format";
 
 /**
  * @typedef {import("@prismicio/client").Content.FeatureGridSlice} FeatureGridSlice
@@ -12,6 +13,9 @@ const FeatureGrid = ({ slice }) => (
         {/* Single Card */}
         <div className={styles.card}>
             <PrismicRichText field={slice.primary.plan_title} />
+            <Currency locale="en-US" currency="USD">
+                {slice.primary.plan_price}
+            </Currency>
             <PrismicRichText field={slice.primary.plan_price} />
             <PrismicRichText field={slice.primary.plan_features} />
             <button>Buy Now</button>

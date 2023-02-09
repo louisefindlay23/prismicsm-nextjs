@@ -9,6 +9,28 @@ type Simplify<T> = {
 /** Content for Home documents */
 interface HomeDocumentData {
     /**
+     * Site Title field in *Home*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home.site_title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    site_title: prismicT.TitleField;
+    /**
+     * Site Logo field in *Home*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home.site_logo
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    site_logo: prismicT.ImageField<never>;
+    /**
      * Slice Zone field in *Home*
      *
      * - **Field Type**: Slice Zone
@@ -76,32 +98,6 @@ type FooterSliceVariation = FooterSliceDefault;
  */
 export type FooterSlice = prismicT.SharedSlice<"footer", FooterSliceVariation>;
 /**
- * Primary content in Header → Primary
- *
- */
-interface HeaderSliceDefaultPrimary {
-    /**
-     * Title field in *Header → Primary*
-     *
-     * - **Field Type**: Title
-     * - **Placeholder**: This is where it all begins...
-     * - **API ID Path**: header.primary.title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    title: prismicT.TitleField;
-    /**
-     * Logo field in *Header → Primary*
-     *
-     * - **Field Type**: Image
-     * - **Placeholder**: *None*
-     * - **API ID Path**: header.primary.logo
-     * - **Documentation**: https://prismic.io/docs/core-concepts/image
-     *
-     */
-    logo: prismicT.ImageField<never>;
-}
-/**
  * Item in Header → Items
  *
  */
@@ -135,7 +131,7 @@ export interface HeaderSliceDefaultItem {
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type HeaderSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<HeaderSliceDefaultPrimary>, Simplify<HeaderSliceDefaultItem>>;
+export type HeaderSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<HeaderSliceDefaultItem>>;
 /**
  * Slice variation for *Header*
  *
@@ -237,13 +233,13 @@ interface FeatureGridSliceDefaultPrimary {
     /**
      * Plan Price field in *PlanGrid → Primary*
      *
-     * - **Field Type**: Title
+     * - **Field Type**: Number
      * - **Placeholder**: *None*
      * - **API ID Path**: feature_grid.primary.plan_price
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
      *
      */
-    plan_price: prismicT.TitleField;
+    plan_price: prismicT.NumberField;
     /**
      * Plan Features field in *PlanGrid → Primary*
      *
@@ -267,13 +263,13 @@ interface FeatureGridSliceDefaultPrimary {
     /**
      * Plan Two Price field in *PlanGrid → Primary*
      *
-     * - **Field Type**: Title
+     * - **Field Type**: Number
      * - **Placeholder**: *None*
      * - **API ID Path**: feature_grid.primary.plan_two_price
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
      *
      */
-    plan_two_price: prismicT.TitleField;
+    plan_two_price: prismicT.NumberField;
     /**
      * Plan Two Features field in *PlanGrid → Primary*
      *
@@ -295,15 +291,15 @@ interface FeatureGridSliceDefaultPrimary {
      */
     plan_three_title: prismicT.TitleField;
     /**
-     * Plan Three Price field in *PlanGrid → Primary*
+     * Feature Three Price field in *PlanGrid → Primary*
      *
-     * - **Field Type**: Title
+     * - **Field Type**: Number
      * - **Placeholder**: *None*
-     * - **API ID Path**: feature_grid.primary.plan_three_price
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     * - **API ID Path**: feature_grid.primary.feature_three_price
+     * - **Documentation**: https://prismic.io/docs/core-concepts/number
      *
      */
-    plan_three_price: prismicT.TitleField;
+    feature_three_price: prismicT.NumberField;
     /**
      * Plan Three Features field in *PlanGrid → Primary*
      *
@@ -343,6 +339,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, AllDocumentTypes, FooterSliceDefaultPrimary, FooterSliceDefault, FooterSliceVariation, FooterSlice, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, TestSliceDefaultPrimary, TestSliceDefault, TestSliceVariation, TestSlice, FeatureGridSliceDefaultPrimary, FeatureGridSliceDefault, FeatureGridSliceVariation, FeatureGridSlice };
+        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, AllDocumentTypes, FooterSliceDefaultPrimary, FooterSliceDefault, FooterSliceVariation, FooterSlice, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, TestSliceDefaultPrimary, TestSliceDefault, TestSliceVariation, TestSlice, FeatureGridSliceDefaultPrimary, FeatureGridSliceDefault, FeatureGridSliceVariation, FeatureGridSlice };
     }
 }

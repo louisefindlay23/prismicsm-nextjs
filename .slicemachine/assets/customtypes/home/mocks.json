@@ -1,13 +1,45 @@
 {
   "uid": {
     "__TYPE__": "UIDContent",
-    "value": "drew"
+    "value": "butter"
+  },
+  "site_title": {
+    "__TYPE__": "StructuredTextContent",
+    "value": [
+      {
+        "type": "heading1",
+        "content": {
+          "text": "Influence"
+        }
+      }
+    ]
+  },
+  "site_logo": {
+    "__TYPE__": "ImageContent",
+    "origin": {
+      "id": "main",
+      "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb",
+      "width": 3958,
+      "height": 3958
+    },
+    "url": "https://images.unsplash.com/photo-1579931794097-0ad001e51edb",
+    "width": 3958,
+    "height": 3958,
+    "edit": {
+      "zoom": 1,
+      "crop": {
+        "x": 0,
+        "y": 0
+      },
+      "background": "transparent"
+    },
+    "thumbnails": {}
   },
   "slices": {
     "__TYPE__": "SliceContentType",
     "value": [
       {
-        "key": "header$35600edf-1b47-4995-9e1d-f5666fe16df0",
+        "key": "header$5cb1350d-de94-45f0-af02-61728af91f18",
         "name": "header",
         "widget": {
           "__TYPE__": "SharedSliceContent",
@@ -19,7 +51,7 @@
                 {
                   "type": "heading1",
                   "content": {
-                    "text": "Value"
+                    "text": "World"
                   }
                 }
               ]
@@ -28,13 +60,13 @@
               "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
-                "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea",
-                "width": 5000,
-                "height": 4613
+                "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
+                "width": 4172,
+                "height": 4000
               },
-              "url": "https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea",
-              "width": 5000,
-              "height": 4613,
+              "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764",
+              "width": 4172,
+              "height": 4000,
               "edit": {
                 "zoom": 1,
                 "crop": {
@@ -51,7 +83,7 @@
               "__TYPE__": "GroupItemContent",
               "value": [
                 [
-                  "navlinks",
+                  "navigation_links",
                   {
                     "__TYPE__": "LinkContent",
                     "value": {
@@ -61,10 +93,10 @@
                   }
                 ],
                 [
-                  "navtitle",
+                  "navigation_text",
                   {
                     "__TYPE__": "FieldContent",
-                    "value": "solution",
+                    "value": "discover",
                     "type": "Text"
                   }
                 ]
@@ -74,23 +106,23 @@
         }
       },
       {
-        "key": "test$a9334fa4-cc2f-4f43-87d2-815e96051e40",
+        "key": "test$39871394-c335-4301-b999-bf1afed97430",
         "name": "test",
         "widget": {
           "__TYPE__": "SharedSliceContent",
           "variation": "default",
           "primary": {
-            "heroimage": {
+            "hero_image": {
               "__TYPE__": "ImageContent",
               "origin": {
                 "id": "main",
-                "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
-                "width": 3168,
-                "height": 4752
+                "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea",
+                "width": 3500,
+                "height": 2338
               },
-              "url": "https://images.unsplash.com/photo-1589321599763-d66926c29613",
-              "width": 3168,
-              "height": 4752,
+              "url": "https://images.unsplash.com/photo-1448932223592-d1fc686e76ea",
+              "width": 3500,
+              "height": 2338,
               "edit": {
                 "zoom": 1,
                 "crop": {
@@ -101,26 +133,38 @@
               },
               "thumbnails": {}
             },
-            "heroheading": {
-              "__TYPE__": "FieldContent",
-              "value": "pound",
-              "type": "Text"
+            "hero_heading": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading2",
+                  "content": {
+                    "text": "Throw"
+                  }
+                }
+              ]
             },
-            "herorichtext": {
+            "hero_text": {
               "__TYPE__": "StructuredTextContent",
               "value": [
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Laborum commodo dolor nisi occaecat sunt sunt laboris do amet consectetur."
+                    "text": "Sit consequat consequat ex Lorem ea enim non."
                   }
                 }
               ]
             },
-            "herobuttontext": {
-              "__TYPE__": "FieldContent",
-              "value": "lay",
-              "type": "Text"
+            "hero_button_text": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Et voluptate consectetur nisi cupidatat enim duis nostrud cupidatat ex nisi. In fugiat quis id fugiat amet dolor est labore cupidatat anim eu. Ut ad anim velit commodo sunt nostrud amet."
+                  }
+                }
+              ]
             }
           },
           "items": [
@@ -132,86 +176,130 @@
         }
       },
       {
-        "key": "feature_grid$dd445e7c-e023-46de-ad31-9755a7dc0fca",
+        "key": "feature_grid$87d618c0-fb4c-4022-81d0-5d4954b7cbfa",
         "name": "feature_grid",
         "widget": {
           "__TYPE__": "SharedSliceContent",
           "variation": "default",
           "primary": {
-            "featuretitle": {
-              "__TYPE__": "FieldContent",
-              "value": "swing",
-              "type": "Text"
+            "plan_title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading3",
+                  "content": {
+                    "text": "Leather"
+                  }
+                }
+              ]
             },
-            "featureprice": {
-              "__TYPE__": "FieldContent",
-              "value": "electricity",
-              "type": "Text"
+            "plan_price": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading4",
+                  "content": {
+                    "text": "Music"
+                  }
+                }
+              ]
             },
-            "featuretwotitle": {
-              "__TYPE__": "FieldContent",
-              "value": "locate",
-              "type": "Text"
+            "plan_features": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Enim in dolore consectetur veniam reprehenderit ut ipsum minim magna quis proident. Laborum aliquip ea mollit exercitation velit cillum nulla nisi. Cillum occaecat non non mollit culpa aliquip commodo."
+                  }
+                }
+              ]
             },
-            "featuretwoprice": {
-              "__TYPE__": "FieldContent",
-              "value": "greatest",
-              "type": "Text"
+            "plan_two_title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading3",
+                  "content": {
+                    "text": "Original"
+                  }
+                }
+              ]
             },
-            "featurethreetitle": {
-              "__TYPE__": "FieldContent",
-              "value": "ready",
-              "type": "Text"
+            "plan_two_price": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading4",
+                  "content": {
+                    "text": "Pupil"
+                  }
+                }
+              ]
             },
-            "featurethreeprice": {
-              "__TYPE__": "FieldContent",
-              "value": "keep",
-              "type": "Text"
+            "plan_two_features": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Cupidatat veniam aliqua non laboris do sunt adipisicing laboris aliqua amet nostrud consequat minim incididunt. Consequat irure proident adipisicing eu aliqua Lorem in et commodo consequat ut irure deserunt."
+                  }
+                }
+              ]
+            },
+            "plan_three_title": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading4",
+                  "content": {
+                    "text": "Happily"
+                  }
+                }
+              ]
+            },
+            "plan_three_price": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading3",
+                  "content": {
+                    "text": "Breakfast"
+                  }
+                }
+              ]
+            },
+            "plan_three_features": {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Ea eiusmod cillum consequat aliqua excepteur sit sit incididunt excepteur et elit."
+                  }
+                }
+              ]
             }
           },
           "items": [
             {
               "__TYPE__": "GroupItemContent",
-              "value": [
-                [
-                  "featureitem",
-                  {
-                    "__TYPE__": "FieldContent",
-                    "value": "parallel",
-                    "type": "Text"
-                  }
-                ],
-                [
-                  "featuretwoitem",
-                  {
-                    "__TYPE__": "FieldContent",
-                    "value": "fair",
-                    "type": "Text"
-                  }
-                ],
-                [
-                  "featurethreeitem",
-                  {
-                    "__TYPE__": "FieldContent",
-                    "value": "specific",
-                    "type": "Text"
-                  }
-                ]
-              ]
+              "value": []
             }
           ]
         }
       },
       {
-        "key": "footer$b489b9b3-7024-4d23-906b-b89c21b738a7",
+        "key": "footer$9ccd1f2e-cfb5-4d60-bb2e-56b48bf0e5a6",
         "name": "footer",
         "widget": {
           "__TYPE__": "SharedSliceContent",
           "variation": "default",
           "primary": {
-            "copyright": {
+            "copyright_statement": {
               "__TYPE__": "FieldContent",
-              "value": "best",
+              "value": "look",
               "type": "Text"
             }
           },

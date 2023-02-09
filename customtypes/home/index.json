@@ -12,6 +12,23 @@
           "placeholder": ""
         }
       },
+      "site_title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Site Title",
+          "placeholder": "",
+          "allowTargetBlank": false,
+          "single": "heading1"
+        }
+      },
+      "site_logo": {
+        "type": "Image",
+        "config": {
+          "label": "Site Logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
