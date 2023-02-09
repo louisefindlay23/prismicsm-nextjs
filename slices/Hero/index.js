@@ -6,6 +6,7 @@ const Hero = ({ slice }) => (
     <section
         className={`${styles.heroBackground} ${styles.flexVerticalCenter}`}
     >
+        {/* TODO: No support for ::before pseudo attributes */}
         <div
             className={[styles.heroContent, styles.flexVerticalCenter].join(
                 " "
