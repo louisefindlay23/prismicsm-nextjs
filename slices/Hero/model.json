@@ -20,10 +20,12 @@
           }
         },
         "hero_heading": {
-          "type": "Text",
+          "type": "StructuredText",
           "config": {
             "label": "Hero Heading",
-            "placeholder": ""
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading2"
           }
         },
         "hero_text": {
@@ -36,10 +38,12 @@
           }
         },
         "hero_button_text": {
-          "type": "Text",
+          "type": "StructuredText",
           "config": {
             "label": "Hero Button Text",
-            "placeholder": ""
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
           }
         }
       },

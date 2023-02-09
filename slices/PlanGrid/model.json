@@ -12,71 +12,88 @@
       "description": "FeatureGrid",
       "primary": {
         "plan_title": {
-          "type": "Text",
+          "type": "StructuredText",
           "config": {
             "label": "Plan Title",
-            "placeholder": ""
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
           }
         },
         "plan_price": {
-          "type": "Text",
+          "type": "StructuredText",
           "config": {
             "label": "Plan Price",
-            "placeholder": ""
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading4"
+          }
+        },
+        "plan_features": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Plan Features",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "list-item"
           }
         },
         "plan_two_title": {
-          "type": "Text",
+          "type": "StructuredText",
           "config": {
             "label": "Plan Two Title",
-            "placeholder": ""
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
           }
         },
         "plan_two_price": {
-          "type": "Text",
+          "type": "StructuredText",
           "config": {
             "label": "Plan Two Price",
-            "placeholder": ""
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading4"
+          }
+        },
+        "plan_two_features": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Plan Two Features",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "list-item"
           }
         },
         "plan_three_title": {
-          "type": "Text",
+          "type": "StructuredText",
           "config": {
             "label": "Plan Three Title",
-            "placeholder": ""
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading4"
           }
         },
         "plan_three_price": {
-          "type": "Text",
+          "type": "StructuredText",
           "config": {
             "label": "Plan Three Price",
-            "placeholder": ""
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "heading3"
+          }
+        },
+        "plan_three_features": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Plan Three Features",
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "list-item"
           }
         }
       },
-      "items": {
-        "plan_items": {
-          "type": "Text",
-          "config": {
-            "label": "Plan Items",
-            "placeholder": ""
-          }
-        },
-        "plan_two_items": {
-          "type": "Text",
-          "config": {
-            "label": "Plan Two Items",
-            "placeholder": ""
-          }
-        },
-        "plan_three_items": {
-          "type": "Text",
-          "config": {
-            "label": "Plan Three Items",
-            "placeholder": ""
-          }
-        }
-      },
+      "items": {},
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }
   ]

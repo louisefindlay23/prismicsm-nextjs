@@ -4,123 +4,109 @@
     "variation": "default",
     "primary": {
       "plan_title": {
-        "__TYPE__": "FieldContent",
-        "value": "period",
-        "type": "Text"
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading3",
+            "content": {
+              "text": "Sister"
+            }
+          }
+        ]
       },
       "plan_price": {
-        "__TYPE__": "FieldContent",
-        "value": "hospital",
-        "type": "Text"
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading4",
+            "content": {
+              "text": "Suddenly"
+            }
+          }
+        ]
+      },
+      "plan_features": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Amet culpa minim sunt consectetur pariatur occaecat occaecat nisi ipsum sunt minim pariatur esse reprehenderit."
+            }
+          }
+        ]
       },
       "plan_two_title": {
-        "__TYPE__": "FieldContent",
-        "value": "ask",
-        "type": "Text"
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading3",
+            "content": {
+              "text": "Found"
+            }
+          }
+        ]
       },
       "plan_two_price": {
-        "__TYPE__": "FieldContent",
-        "value": "breathe",
-        "type": "Text"
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading4",
+            "content": {
+              "text": "Radio"
+            }
+          }
+        ]
+      },
+      "plan_two_features": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Quis velit quis ullamco magna tempor consectetur enim et occaecat non. Ullamco culpa deserunt sit id labore nostrud occaecat qui proident est commodo nisi reprehenderit officia deserunt. Consectetur reprehenderit laborum culpa."
+            }
+          }
+        ]
       },
       "plan_three_title": {
-        "__TYPE__": "FieldContent",
-        "value": "observe",
-        "type": "Text"
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading4",
+            "content": {
+              "text": "Toward"
+            }
+          }
+        ]
       },
       "plan_three_price": {
-        "__TYPE__": "FieldContent",
-        "value": "again",
-        "type": "Text"
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "heading3",
+            "content": {
+              "text": "Breath"
+            }
+          }
+        ]
+      },
+      "plan_three_features": {
+        "__TYPE__": "StructuredTextContent",
+        "value": [
+          {
+            "type": "paragraph",
+            "content": {
+              "text": "Minim est dolor exercitation ex eu nostrud laboris deserunt ut."
+            }
+          }
+        ]
       }
     },
     "items": [
       {
         "__TYPE__": "GroupItemContent",
-        "value": [
-          [
-            "plan_items",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "seldom",
-              "type": "Text"
-            }
-          ],
-          [
-            "plan_two_items",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "involved",
-              "type": "Text"
-            }
-          ],
-          [
-            "plan_three_items",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "store",
-              "type": "Text"
-            }
-          ]
-        ]
-      },
-      {
-        "__TYPE__": "GroupItemContent",
-        "value": [
-          [
-            "plan_items",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "solid",
-              "type": "Text"
-            }
-          ],
-          [
-            "plan_two_items",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "they",
-              "type": "Text"
-            }
-          ],
-          [
-            "plan_three_items",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "quarter",
-              "type": "Text"
-            }
-          ]
-        ]
-      },
-      {
-        "__TYPE__": "GroupItemContent",
-        "value": [
-          [
-            "plan_items",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "hardly",
-              "type": "Text"
-            }
-          ],
-          [
-            "plan_two_items",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "replace",
-              "type": "Text"
-            }
-          ],
-          [
-            "plan_three_items",
-            {
-              "__TYPE__": "FieldContent",
-              "value": "machinery",
-              "type": "Text"
-            }
-          ]
-        ]
+        "value": []
       }
     ]
   }
