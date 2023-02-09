@@ -2,93 +2,48 @@
   {
     "__TYPE__": "SharedSliceContent",
     "variation": "default",
-    "primary": {
-      "plan_title": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "heading3",
-            "content": {
-              "text": "Sister"
-            }
-          }
-        ]
-      },
-      "plan_price": {
-        "__TYPE__": "FieldContent",
-        "value": "32",
-        "type": "Number"
-      },
-      "plan_features": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "paragraph",
-            "content": {
-              "text": "Amet culpa minim sunt consectetur pariatur occaecat occaecat nisi ipsum sunt minim pariatur esse reprehenderit."
-            }
-          }
-        ]
-      },
-      "plan_two_title": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "heading3",
-            "content": {
-              "text": "Found"
-            }
-          }
-        ]
-      },
-      "plan_two_price": {
-        "__TYPE__": "FieldContent",
-        "value": "26",
-        "type": "Number"
-      },
-      "plan_two_features": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "paragraph",
-            "content": {
-              "text": "Quis velit quis ullamco magna tempor consectetur enim et occaecat non. Ullamco culpa deserunt sit id labore nostrud occaecat qui proident est commodo nisi reprehenderit officia deserunt. Consectetur reprehenderit laborum culpa."
-            }
-          }
-        ]
-      },
-      "plan_three_title": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "heading4",
-            "content": {
-              "text": "Toward"
-            }
-          }
-        ]
-      },
-      "plan_three_features": {
-        "__TYPE__": "StructuredTextContent",
-        "value": [
-          {
-            "type": "paragraph",
-            "content": {
-              "text": "Minim est dolor exercitation ex eu nostrud laboris deserunt ut."
-            }
-          }
-        ]
-      },
-      "feature_three_price": {
-        "__TYPE__": "FieldContent",
-        "value": "94",
-        "type": "Number"
-      }
-    },
+    "primary": {},
     "items": [
       {
         "__TYPE__": "GroupItemContent",
-        "value": []
+        "value": [
+          [
+            "plan_title_r",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "heading3",
+                  "content": {
+                    "text": "Connected"
+                  }
+                }
+              ]
+            }
+          ],
+          [
+            "plan_price_r",
+            {
+              "__TYPE__": "FieldContent",
+              "value": "19",
+              "type": "Number"
+            }
+          ],
+          [
+            "plan_features_r",
+            {
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Dolore exercitation aliquip officia pariatur duis cillum labore laborum magna ea irure quis. Aliqua et officia laboris reprehenderit in ad dolor dolore nisi est excepteur pariatur ut nisi. Elit sint cupidatat esse ea labore esse labore ut esse ullamco consequat."
+                  }
+                }
+              ]
+            }
+          ]
+        ]
       }
     ]
   }

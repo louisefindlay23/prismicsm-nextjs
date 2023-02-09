@@ -10,29 +10,22 @@ import { Currency } from "react-intl-number-format";
  */
 const FeatureGrid = ({ slice }) => (
     <section className={styles.grid}>
-        {/* Single Card */}
-        <div className={styles.card}>
-            <PrismicRichText field={slice.primary.plan_title} />
-            <Currency locale="en-US" currency="USD">
-                {slice.primary.plan_price}
-            </Currency>
-            <PrismicRichText field={slice.primary.plan_price} />
-            <PrismicRichText field={slice.primary.plan_features} />
-            <button>Buy Now</button>
-        </div>
-        {/* Other Cards */}
-        <div className={styles.card}>
-            <PrismicRichText field={slice.primary.plan_two_title} />
-            <PrismicRichText field={slice.primary.plan_two_price} />
-            <PrismicRichText field={slice.primary.plan_features} />
-            <button>Buy Now</button>
-        </div>
-        <div className={styles.card}>
-            <PrismicRichText field={slice.primary.plan_three_title} />
-            <PrismicRichText field={slice.primary.three_price} />
-            <PrismicRichText field={slice.primary.plan_three_features} />
-            <button>Buy Now</button>
-        </div>
+        {/* Card */}
+        {slice?.items?.map((item, i) => (
+            <div className={styles.card}>
+                <PrismicRichText field={item.plan_title_r} />
+                <Currency locale="en-US" currency="USD">
+                    {item.plan_price_r}
+                </Currency>
+                <ul>
+                    <PrismicRichText
+                        key={JSON.stringify(item)}
+                        field={item.plan_features_r}
+                    />
+                </ul>
+                <button>Buy Now</button>
+            </div>
+        ))}
     </section>
 );
 

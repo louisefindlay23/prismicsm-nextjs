@@ -216,100 +216,40 @@ type TestSliceVariation = TestSliceDefault;
  */
 export type TestSlice = prismicT.SharedSlice<"test", TestSliceVariation>;
 /**
- * Primary content in PlanGrid → Primary
+ * Item in PlanGrid → Items
  *
  */
-interface FeatureGridSliceDefaultPrimary {
+export interface FeatureGridSliceDefaultItem {
     /**
-     * Plan Title field in *PlanGrid → Primary*
+     * Plan Title R field in *PlanGrid → Items*
      *
      * - **Field Type**: Title
      * - **Placeholder**: *None*
-     * - **API ID Path**: feature_grid.primary.plan_title
+     * - **API ID Path**: feature_grid.items[].plan_title_r
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    plan_title: prismicT.TitleField;
+    plan_title_r: prismicT.TitleField;
     /**
-     * Plan Price field in *PlanGrid → Primary*
+     * Plan Price R field in *PlanGrid → Items*
      *
      * - **Field Type**: Number
      * - **Placeholder**: *None*
-     * - **API ID Path**: feature_grid.primary.plan_price
+     * - **API ID Path**: feature_grid.items[].plan_price_r
      * - **Documentation**: https://prismic.io/docs/core-concepts/number
      *
      */
-    plan_price: prismicT.NumberField;
+    plan_price_r: prismicT.NumberField;
     /**
-     * Plan Features field in *PlanGrid → Primary*
+     * Plan Features R field in *PlanGrid → Items*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: feature_grid.primary.plan_features
+     * - **API ID Path**: feature_grid.items[].plan_features_r
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    plan_features: prismicT.RichTextField;
-    /**
-     * Plan Two Title field in *PlanGrid → Primary*
-     *
-     * - **Field Type**: Title
-     * - **Placeholder**: *None*
-     * - **API ID Path**: feature_grid.primary.plan_two_title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    plan_two_title: prismicT.TitleField;
-    /**
-     * Plan Two Price field in *PlanGrid → Primary*
-     *
-     * - **Field Type**: Number
-     * - **Placeholder**: *None*
-     * - **API ID Path**: feature_grid.primary.plan_two_price
-     * - **Documentation**: https://prismic.io/docs/core-concepts/number
-     *
-     */
-    plan_two_price: prismicT.NumberField;
-    /**
-     * Plan Two Features field in *PlanGrid → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: feature_grid.primary.plan_two_features
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    plan_two_features: prismicT.RichTextField;
-    /**
-     * Plan Three Title field in *PlanGrid → Primary*
-     *
-     * - **Field Type**: Title
-     * - **Placeholder**: *None*
-     * - **API ID Path**: feature_grid.primary.plan_three_title
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    plan_three_title: prismicT.TitleField;
-    /**
-     * Feature Three Price field in *PlanGrid → Primary*
-     *
-     * - **Field Type**: Number
-     * - **Placeholder**: *None*
-     * - **API ID Path**: feature_grid.primary.feature_three_price
-     * - **Documentation**: https://prismic.io/docs/core-concepts/number
-     *
-     */
-    feature_three_price: prismicT.NumberField;
-    /**
-     * Plan Three Features field in *PlanGrid → Primary*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: feature_grid.primary.plan_three_features
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    plan_three_features: prismicT.RichTextField;
+    plan_features_r: prismicT.RichTextField;
 }
 /**
  * Default variation for PlanGrid Slice
@@ -319,7 +259,7 @@ interface FeatureGridSliceDefaultPrimary {
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type FeatureGridSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<FeatureGridSliceDefaultPrimary>, never>;
+export type FeatureGridSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<FeatureGridSliceDefaultItem>>;
 /**
  * Slice variation for *PlanGrid*
  *
@@ -339,6 +279,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, AllDocumentTypes, FooterSliceDefaultPrimary, FooterSliceDefault, FooterSliceVariation, FooterSlice, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, TestSliceDefaultPrimary, TestSliceDefault, TestSliceVariation, TestSlice, FeatureGridSliceDefaultPrimary, FeatureGridSliceDefault, FeatureGridSliceVariation, FeatureGridSlice };
+        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, AllDocumentTypes, FooterSliceDefaultPrimary, FooterSliceDefault, FooterSliceVariation, FooterSlice, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, TestSliceDefaultPrimary, TestSliceDefault, TestSliceVariation, TestSlice, FeatureGridSliceDefaultItem, FeatureGridSliceDefault, FeatureGridSliceVariation, FeatureGridSlice };
     }
 }
