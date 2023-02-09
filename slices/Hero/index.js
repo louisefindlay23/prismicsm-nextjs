@@ -3,8 +3,14 @@ import styles from "./hero.module.css";
 import { PrismicRichText } from "@prismicio/react";
 
 const Hero = ({ slice }) => (
-    <section className={`${styles.heroBck} ${styles.flexVertCenter}`}>
-        <div className={[styles.heroContent, styles.flexVertCenter].join(" ")}>
+    <section
+        className={`${styles.heroBackground} ${styles.flexVerticalCenter}`}
+    >
+        <div
+            className={[styles.heroContent, styles.flexVerticalCenter].join(
+                " "
+            )}
+        >
             {/* Hero Content */}
             <PrismicRichText field={slice.primary.hero_heading} />
             <PrismicRichText field={slice.primary.hero_text} />
