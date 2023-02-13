@@ -22,10 +22,12 @@
           }
         },
         "navigation_text": {
-          "type": "Text",
+          "type": "StructuredText",
           "config": {
             "label": "Navigation Text",
-            "placeholder": ""
+            "placeholder": "",
+            "allowTargetBlank": true,
+            "single": "paragraph"
           }
         }
       },

@@ -13,16 +13,22 @@
               "__TYPE__": "LinkContent",
               "value": {
                 "__TYPE__": "ExternalLink",
-                "url": "http://google.com"
+                "url": "https://prismic.io"
               }
             }
           ],
           [
             "navigation_text",
             {
-              "__TYPE__": "FieldContent",
-              "value": "city",
-              "type": "Text"
+              "__TYPE__": "StructuredTextContent",
+              "value": [
+                {
+                  "type": "paragraph",
+                  "content": {
+                    "text": "Nulla ipsum amet cupidatat duis. Eiusmod quis aliqua elit cupidatat excepteur voluptate do officia sint aliquip culpa id dolore ex veniam."
+                  }
+                }
+              ]
             }
           ]
         ]

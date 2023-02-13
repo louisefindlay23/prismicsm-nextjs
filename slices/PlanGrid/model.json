@@ -12,26 +12,26 @@
       "description": "FeatureGrid",
       "primary": {},
       "items": {
-        "plan_title_r": {
+        "plan_title": {
           "type": "StructuredText",
           "config": {
-            "label": "Plan Title R",
+            "label": "Plan Title",
             "placeholder": "",
             "allowTargetBlank": true,
             "single": "heading3"
           }
         },
-        "plan_price_r": {
+        "plan_price": {
           "type": "Number",
           "config": {
-            "label": "Plan Price R",
+            "label": "Plan Price",
             "placeholder": ""
           }
         },
-        "plan_features_r": {
+        "plan_features": {
           "type": "StructuredText",
           "config": {
-            "label": "Plan Features R",
+            "label": "Plan Features",
             "placeholder": "",
             "allowTargetBlank": true,
             "single": "list-item"

@@ -115,13 +115,13 @@ export interface HeaderSliceDefaultItem {
     /**
      * Navigation Text field in *Header → Items*
      *
-     * - **Field Type**: Text
+     * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
      * - **API ID Path**: header.items[].navigation_text
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    navigation_text: prismicT.KeyTextField;
+    navigation_text: prismicT.RichTextField;
 }
 /**
  * Default variation for Header Slice
@@ -221,35 +221,35 @@ export type TestSlice = prismicT.SharedSlice<"test", TestSliceVariation>;
  */
 export interface FeatureGridSliceDefaultItem {
     /**
-     * Plan Title R field in *PlanGrid → Items*
+     * Plan Title field in *PlanGrid → Items*
      *
      * - **Field Type**: Title
      * - **Placeholder**: *None*
-     * - **API ID Path**: feature_grid.items[].plan_title_r
+     * - **API ID Path**: feature_grid.items[].plan_title
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    plan_title_r: prismicT.TitleField;
+    plan_title: prismicT.TitleField;
     /**
-     * Plan Price R field in *PlanGrid → Items*
+     * Plan Price field in *PlanGrid → Items*
      *
      * - **Field Type**: Number
      * - **Placeholder**: *None*
-     * - **API ID Path**: feature_grid.items[].plan_price_r
+     * - **API ID Path**: feature_grid.items[].plan_price
      * - **Documentation**: https://prismic.io/docs/core-concepts/number
      *
      */
-    plan_price_r: prismicT.NumberField;
+    plan_price: prismicT.NumberField;
     /**
-     * Plan Features R field in *PlanGrid → Items*
+     * Plan Features field in *PlanGrid → Items*
      *
      * - **Field Type**: Rich Text
      * - **Placeholder**: *None*
-     * - **API ID Path**: feature_grid.items[].plan_features_r
+     * - **API ID Path**: feature_grid.items[].plan_features
      * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
      *
      */
-    plan_features_r: prismicT.RichTextField;
+    plan_features: prismicT.RichTextField;
 }
 /**
  * Default variation for PlanGrid Slice

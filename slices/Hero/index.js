@@ -23,3 +23,8 @@ const Hero = ({ slice }) => (
 );
 
 export default Hero;
+
+<div class="grid">
+    <img />
+    <div class="text"></div>
+</div>;

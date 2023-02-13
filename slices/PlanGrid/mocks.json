@@ -8,36 +8,36 @@
         "__TYPE__": "GroupItemContent",
         "value": [
           [
-            "plan_title_r",
+            "plan_title",
             {
               "__TYPE__": "StructuredTextContent",
               "value": [
                 {
                   "type": "heading3",
                   "content": {
-                    "text": "Connected"
+                    "text": "Individual"
                   }
                 }
               ]
             }
           ],
           [
-            "plan_price_r",
+            "plan_price",
             {
               "__TYPE__": "FieldContent",
-              "value": "19",
+              "value": "96",
               "type": "Number"
             }
           ],
           [
-            "plan_features_r",
+            "plan_features",
             {
               "__TYPE__": "StructuredTextContent",
               "value": [
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Dolore exercitation aliquip officia pariatur duis cillum labore laborum magna ea irure quis. Aliqua et officia laboris reprehenderit in ad dolor dolore nisi est excepteur pariatur ut nisi. Elit sint cupidatat esse ea labore esse labore ut esse ullamco consequat."
+                    "text": "Eu irure commodo amet quis enim."
                   }
                 }
               ]

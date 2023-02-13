@@ -13,15 +13,14 @@ const FeatureGrid = ({ slice }) => (
         {/* Card */}
         {slice?.items?.map((item, i) => (
             <div className={styles.card}>
-                <PrismicRichText field={item.plan_title_r} />
-                <Currency locale="en-US" currency="USD">
-                    {item.plan_price_r}
-                </Currency>
+                <PrismicRichText field={item.plan_title} />
+                <h4>
+                    <Currency locale="en-US" currency="USD">
+                        {item.plan_price}
+                    </Currency>
+                </h4>
                 <ul>
-                    <PrismicRichText
-                        key={JSON.stringify(item)}
-                        field={item.plan_features_r}
-                    />
+                    <PrismicRichText field={item.plan_features} />
                 </ul>
                 <button>Buy Now</button>
             </div>
