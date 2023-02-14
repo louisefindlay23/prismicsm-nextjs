@@ -1,6 +1,7 @@
 {
   "_cts": {
-    "home": {}
+    "home": {},
+    "navigation": {}
   },
   "slices": {
     "Header": {
@@ -27,6 +28,12 @@
       }
     },
     "PlanGrid": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "Navigation": {
       "default": {
         "primary": {},
         "items": {}

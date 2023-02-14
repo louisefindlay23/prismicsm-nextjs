@@ -33,26 +33,6 @@
     font-weight: bold;
 }
 
-/* Nav */
-
-.nav {
-    display: flex;
-    align-items: center;
-}
-
-.nav ul {
-    display: flex;
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.nav ul li a {
-    display: block;
-    padding: 1.5rem 1rem;
-    font-size: 1rem;
-    font-weight: 500;
-}
-
 /* Select */
 
 .currencyDropdown {

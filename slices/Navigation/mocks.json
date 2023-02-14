@@ -13,7 +13,7 @@
               "__TYPE__": "LinkContent",
               "value": {
                 "__TYPE__": "ExternalLink",
-                "url": "https://prismic.io"
+                "url": "https://slicemachine.dev"
               }
             }
           ],
@@ -25,7 +25,7 @@
                 {
                   "type": "paragraph",
                   "content": {
-                    "text": "Nulla ipsum amet cupidatat duis. Eiusmod quis aliqua elit cupidatat excepteur voluptate do officia sint aliquip culpa id dolore ex veniam."
+                    "text": "Irure incididunt non labore nisi commodo sit anim consectetur amet aute veniam quis excepteur."
                   }
                 }
               ]

@@ -46,7 +46,7 @@ interface HomeDocumentData {
  * Slice for *Home → Slice Zone*
  *
  */
-type HomeDocumentDataSlicesSlice = HeaderSlice | TestSlice | FeatureGridSlice | FooterSlice;
+type HomeDocumentDataSlicesSlice = TestSlice | FeatureGridSlice | FooterSlice;
 /**
  * Home document from Prismic
  *
@@ -57,7 +57,36 @@ type HomeDocumentDataSlicesSlice = HeaderSlice | TestSlice | FeatureGridSlice | 
  * @typeParam Lang - Language API ID of the document.
  */
 export type HomeDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<HomeDocumentData>, "home", Lang>;
-export type AllDocumentTypes = HomeDocument;
+/** Content for Navigation documents */
+interface NavigationDocumentData {
+    /**
+     * Slice Zone field in *Navigation*
+     *
+     * - **Field Type**: Slice Zone
+     * - **Placeholder**: *None*
+     * - **API ID Path**: navigation.slices[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/slices
+     *
+     */
+    slices: prismicT.SliceZone<NavigationDocumentDataSlicesSlice>;
+}
+/**
+ * Slice for *Navigation → Slice Zone*
+ *
+ */
+type NavigationDocumentDataSlicesSlice = HeaderSlice;
+/**
+ * Navigation document from Prismic
+ *
+ * - **API ID**: `navigation`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type NavigationDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<NavigationDocumentData>, "navigation", Lang>;
+export type AllDocumentTypes = HomeDocument | NavigationDocument;
 /**
  * Primary content in Footer → Primary
  *
@@ -97,55 +126,6 @@ type FooterSliceVariation = FooterSliceDefault;
  *
  */
 export type FooterSlice = prismicT.SharedSlice<"footer", FooterSliceVariation>;
-/**
- * Item in Header → Items
- *
- */
-export interface HeaderSliceDefaultItem {
-    /**
-     * Navigation Links field in *Header → Items*
-     *
-     * - **Field Type**: Link
-     * - **Placeholder**: *None*
-     * - **API ID Path**: header.items[].navigation_links
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    navigation_links: prismicT.LinkField;
-    /**
-     * Navigation Text field in *Header → Items*
-     *
-     * - **Field Type**: Rich Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: header.items[].navigation_text
-     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
-     *
-     */
-    navigation_text: prismicT.RichTextField;
-}
-/**
- * Default variation for Header Slice
- *
- * - **API ID**: `default`
- * - **Description**: `Header`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type HeaderSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<HeaderSliceDefaultItem>>;
-/**
- * Slice variation for *Header*
- *
- */
-type HeaderSliceVariation = HeaderSliceDefault;
-/**
- * Header Shared Slice
- *
- * - **API ID**: `header`
- * - **Description**: `Header`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type HeaderSlice = prismicT.SharedSlice<"header", HeaderSliceVariation>;
 /**
  * Primary content in Hero → Primary
  *
@@ -216,6 +196,55 @@ type TestSliceVariation = TestSliceDefault;
  */
 export type TestSlice = prismicT.SharedSlice<"test", TestSliceVariation>;
 /**
+ * Item in Navigation → Items
+ *
+ */
+export interface HeaderSliceDefaultItem {
+    /**
+     * Navigation Links field in *Navigation → Items*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.items[].navigation_links
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    navigation_links: prismicT.LinkField;
+    /**
+     * Navigation Text field in *Navigation → Items*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: header.items[].navigation_text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    navigation_text: prismicT.RichTextField;
+}
+/**
+ * Default variation for Navigation Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Header`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeaderSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<HeaderSliceDefaultItem>>;
+/**
+ * Slice variation for *Navigation*
+ *
+ */
+type HeaderSliceVariation = HeaderSliceDefault;
+/**
+ * Navigation Shared Slice
+ *
+ * - **API ID**: `header`
+ * - **Description**: `Header`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type HeaderSlice = prismicT.SharedSlice<"header", HeaderSliceVariation>;
+/**
  * Item in PlanGrid → Items
  *
  */
@@ -279,6 +308,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, AllDocumentTypes, FooterSliceDefaultPrimary, FooterSliceDefault, FooterSliceVariation, FooterSlice, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, TestSliceDefaultPrimary, TestSliceDefault, TestSliceVariation, TestSlice, FeatureGridSliceDefaultItem, FeatureGridSliceDefault, FeatureGridSliceVariation, FeatureGridSlice };
+        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, AllDocumentTypes, FooterSliceDefaultPrimary, FooterSliceDefault, FooterSliceVariation, FooterSlice, TestSliceDefaultPrimary, TestSliceDefault, TestSliceVariation, TestSlice, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, FeatureGridSliceDefaultItem, FeatureGridSliceDefault, FeatureGridSliceVariation, FeatureGridSlice };
     }
 }
