@@ -1,15 +1,13 @@
 import React, { useState } from "react";
-import styles from "../styles/header.module.css";
 import Head from "next/head";
 import Link from "next/link";
 import { Currency } from "react-intl-number-format";
 import { PrismicRichText, PrismicText } from "@prismicio/react";
-import { PrismicLink } from "@prismicio/react";
-import { PrismicImage } from "@prismicio/react";
-import Image from "next/image";
+import { PrismicNextImage } from "@prismicio/react";
+import Header from "./Header";
 
 {
-    /* TODO: Create Navigation Slice - use same repeatable zone fields as Header. Create Navigation component using code snippet from Prismic docs */
+    /* TODO: Move footer same as Header */
 }
 
 export default function Layout({ children, page }) {
@@ -21,45 +19,7 @@ export default function Layout({ children, page }) {
                     <PrismicText field={page.data.site_title} />
                 </title>
             </Head>
-
-            <section>
-                {/* Header */}
-                <header className={styles.header}>
-                    <div className={styles.wrapper}>
-                        {/* Logo Link */}
-                        <div className={styles.logo}>
-                            <Link href="/">
-                                <Image
-                                    src={page.data.site_logo.url}
-                                    alt={page.data.site_logo.alt}
-                                    width={125}
-                                    height={100}
-                                />
-                            </Link>
-                        </div>
-                        {/* Title Link */}
-                        <Link className={styles.title} href="#">
-                            <PrismicRichText field={page.data.site_title} />
-                        </Link>
-                        {/* Nav */}
-                        <select
-                            className={styles.currencyDropdown}
-                            value={value}
-                            onChange={(e) => {
-                                setValue(e.target.value);
-                                console.log(value);
-                            }}
-                        >
-                            <option value="USD">US Dollar</option>
-                            <option value="EUR">Euro</option>
-                            <option value="GBP">British Pound</option>
-                        </select>
-                        <p>
-                            <Currency currency={value}>20</Currency>
-                        </p>
-                    </div>
-                </header>
-            </section>
+            <Header page={page}></Header>
 
             <main>{children}</main>
         </>

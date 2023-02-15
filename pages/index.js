@@ -15,10 +15,14 @@ export async function getStaticProps({ previewData }) {
     const client = createClient({ previewData });
 
     // Render Home page from Prismic
-    const page = await client.getSingle("home");
+    const [navigation, page] = await Promise.all([
+        client.getSingle("home"),
+        client.getSingle("navigation"),
+    ]);
 
     return {
         props: {
+            navigation,
             page,
         },
     };

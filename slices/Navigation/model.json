@@ -10,7 +10,15 @@
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
       "description": "Header",
-      "primary": {},
+      "primary": {
+        "xyz": {
+          "type": "Link",
+          "config": {
+            "label": "xyz",
+            "select": "document"
+          }
+        }
+      },
       "items": {
         "navigation_links": {
           "type": "Link",

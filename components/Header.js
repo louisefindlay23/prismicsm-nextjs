@@ -1,50 +1,55 @@
 import React from "react";
-import styles from "./header.module.css";
+import styles from "../styles/header.module.css";
 import Link from "next/link";
-import { PrismicLink } from "@prismicio/react";
+import { PrismicLink, PrismicNextImage } from "@prismicio/react";
+import Navigation from "./Navigation";
 
 /**
  * @typedef {import("@prismicio/client").Content.HeaderSlice} HeaderSlice
  * @typedef {import("@prismicio/react").SliceComponentProps<HeaderSlice>} HeaderProps
  * @param { HeaderProps }
  */
-const Header = ({ slice }) => (
-    <section>
-        {/* Header */}
-        <header className={styles.header}>
-            <div className={styles.wrapper}>
-                {/* Logo Link */}
-                <div className={styles.logo}>
-                    <Link href="/">
-                        {/* <Image
-                            src={data.site_logo.url}
-                            alt={data.site_logo.alt}
-                            width={100}
-                            height={100}
-/> */}
+export default function Header({ page }) {
+    return (
+        <section>
+            {/* Header */}
+            <header className={styles.header}>
+                <div className={styles.wrapper}>
+                    {/* Logo Link */}
+                    <div className={styles.logo}>
+                        <Link href="/">
+                            <PrismicNextImage
+                                field={page.data.site_logo.url}
+                                alt={page.data.site_logo.alt}
+                                width={125}
+                                height={100}
+                            />
+                        </Link>
+                    </div>
+                    {/* Title Link */}
+                    <Link className={styles.title} href="#">
+                        <PrismicRichText field={page.data.site_title} />
                     </Link>
+                    {/* Nav */}
+                    <Navigation></Navigation>
+                    {/* Currency */}
+                    <select
+                        className={styles.currencyDropdown}
+                        value={value}
+                        onChange={(e) => {
+                            setValue(e.target.value);
+                            console.log(value);
+                        }}
+                    >
+                        <option value="USD">US Dollar</option>
+                        <option value="EUR">Euro</option>
+                        <option value="GBP">British Pound</option>
+                    </select>
+                    <p>
+                        <Currency currency={value}>20</Currency>
+                    </p>
                 </div>
-                {/* Title Link */}
-                <Link className={styles.title} href="#">
-                    <PrismicText field={data.site_title} />
-                </Link>
-                {/* Nav */}
-                <nav className={styles.nav}>
-                    <ul>
-                        {slice?.items?.map((item, i) => {
-                            return (
-                                <li key={JSON.stringify(item)}>
-                                    <PrismicLink field={item.navigation_links}>
-                                        {item.navigation_text}
-                                    </PrismicLink>
-                                </li>
-                            );
-                        })}
-                    </ul>
-                </nav>
-            </div>
-        </header>
-    </section>
-);
-
-export default Header;
+            </header>
+        </section>
+    );
+}
