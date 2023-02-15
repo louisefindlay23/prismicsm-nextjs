@@ -1,12 +1,13 @@
 import { PrismicLink, PrismicText } from "@prismicio/react";
+import styles from "../slices/Navigation/navigation.module.css";
 
 export default function Navigation({ navigation }) {
     return (
-        <nav>
+        <nav className={styles.nav}>
             <ul>
-                {slice.items.length > 0 && (
+                {navigation.data.slices[0].items.length > 0 && (
                     <ul>
-                        {slice.items.map((item) => {
+                        {navigation.data.slices[0].items.map((item, i) => {
                             return (
                                 <li key={JSON.stringify(item)}>
                                     <PrismicLink field={item.navigation_links}>

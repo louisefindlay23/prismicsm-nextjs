@@ -5,7 +5,7 @@ import Layout from "./../components/layout";
 
 export default function Home({ page, navigation, settings }) {
     return (
-        <Layout page={page}>
+        <Layout page={page} navigation={navigation}>
             <SliceZone slices={page.data.slices} components={components} />;
         </Layout>
     );
@@ -14,16 +14,16 @@ export default function Home({ page, navigation, settings }) {
 export async function getStaticProps({ previewData }) {
     const client = createClient({ previewData });
 
-    // Render Home page from Prismic
-    const [navigation, page] = await Promise.all([
+    // Render Home page and Navigation from Prismic
+    const [page, navigation] = await Promise.all([
         client.getSingle("home"),
         client.getSingle("navigation"),
     ]);
 
     return {
         props: {
-            navigation,
             page,
+            navigation,
         },
     };
 }

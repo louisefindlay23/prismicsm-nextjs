@@ -196,22 +196,6 @@ type TestSliceVariation = TestSliceDefault;
  */
 export type TestSlice = prismicT.SharedSlice<"test", TestSliceVariation>;
 /**
- * Primary content in Navigation → Primary
- *
- */
-interface HeaderSliceDefaultPrimary {
-    /**
-     * xyz field in *Navigation → Primary*
-     *
-     * - **Field Type**: Content Relationship
-     * - **Placeholder**: *None*
-     * - **API ID Path**: header.primary.xyz
-     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
-     *
-     */
-    xyz: prismicT.RelationField;
-}
-/**
  * Item in Navigation → Items
  *
  */
@@ -245,7 +229,7 @@ export interface HeaderSliceDefaultItem {
  * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
  *
  */
-export type HeaderSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<HeaderSliceDefaultPrimary>, Simplify<HeaderSliceDefaultItem>>;
+export type HeaderSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, Simplify<HeaderSliceDefaultItem>>;
 /**
  * Slice variation for *Navigation*
  *
@@ -324,6 +308,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, AllDocumentTypes, FooterSliceDefaultPrimary, FooterSliceDefault, FooterSliceVariation, FooterSlice, TestSliceDefaultPrimary, TestSliceDefault, TestSliceVariation, TestSlice, HeaderSliceDefaultPrimary, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, FeatureGridSliceDefaultItem, FeatureGridSliceDefault, FeatureGridSliceVariation, FeatureGridSlice };
+        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, AllDocumentTypes, FooterSliceDefaultPrimary, FooterSliceDefault, FooterSliceVariation, FooterSlice, TestSliceDefaultPrimary, TestSliceDefault, TestSliceVariation, TestSlice, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, FeatureGridSliceDefaultItem, FeatureGridSliceDefault, FeatureGridSliceVariation, FeatureGridSlice };
     }
 }

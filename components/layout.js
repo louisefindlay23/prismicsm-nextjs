@@ -9,7 +9,7 @@ import Header from "./Header";
     /* TODO: Move footer same as Header */
 }
 
-export default function Layout({ children, page }) {
+export default function Layout({ children, page, navigation }) {
     return (
         <>
             <Head>
@@ -17,8 +17,7 @@ export default function Layout({ children, page }) {
                     <PrismicText field={page.data.site_title} />
                 </title>
             </Head>
-            <Header page={page}></Header>
-
+            <Header page={page} navigation={navigation}></Header>
             <main>{children}</main>
         </>
     );

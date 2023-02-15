@@ -14,7 +14,7 @@ import Navigation from "./Navigation";
  * @typedef {import("@prismicio/react").SliceComponentProps<HeaderSlice>} HeaderProps
  * @param { HeaderProps }
  */
-export default function Header({ page }) {
+export default function Header({ page, navigation }) {
     const [value, setValue] = useState("USD");
     return (
         <section>
@@ -23,21 +23,14 @@ export default function Header({ page }) {
                 <div className={styles.wrapper}>
                     {/* Logo Link */}
                     <div className={styles.logo}>
-                        <Link href="/">
-                            <PrismicNextImage
-                                field={page.data.site_logo.url}
-                                alt={page.data.site_logo.alt}
-                                width={125}
-                                height={100}
-                            />
-                        </Link>
+                        <Link href="/"></Link>
                     </div>
                     {/* Title Link */}
                     <Link className={styles.title} href="#">
                         <PrismicRichText field={page.data.site_title} />
                     </Link>
                     {/* Nav */}
-                    <Navigation></Navigation>
+                    <Navigation navigation={navigation}></Navigation>
                     {/* Currency */}
                     <select
                         className={styles.currencyDropdown}
