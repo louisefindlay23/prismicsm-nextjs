@@ -1,7 +1,7 @@
 import React from "react";
-import styles from "./planGrid.module.css";
 import { PrismicRichText } from "@prismicio/react";
 import { Currency } from "react-intl-number-format";
+import styles from "./planGrid.module.css";
 
 /**
  * @typedef {import("@prismicio/client").Content.FeatureGridSlice} FeatureGridSlice

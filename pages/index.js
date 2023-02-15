@@ -1,7 +1,7 @@
 import { SliceZone } from "@prismicio/react";
 import { createClient } from "../prismicio";
 import { components } from "../slices";
-import Layout from "./../components/layout";
+import Layout from "../components/Layout";
 
 export default function Home({ page, navigation, settings }) {
     return (

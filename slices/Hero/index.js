@@ -1,6 +1,6 @@
 import React from "react";
-import styles from "./hero.module.css";
 import { PrismicRichText } from "@prismicio/react";
+import styles from "./hero.module.css";
 
 const Hero = ({ slice }) => (
     <section

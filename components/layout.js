@@ -1,8 +1,6 @@
 import React from "react";
+import { PrismicText } from "@prismicio/react";
 import Head from "next/head";
-import Link from "next/link";
-import { PrismicRichText, PrismicText } from "@prismicio/react";
-import { PrismicNextImage } from "@prismicio/react";
 import Header from "./Header";
 import Footer from "./Footer";
 
