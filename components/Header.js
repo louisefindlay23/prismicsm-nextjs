@@ -44,6 +44,7 @@ export default function Header({ page, navigation }) {
                         <option value="EUR">Euro</option>
                         <option value="GBP">British Pound</option>
                     </select>
+                    {/* TODO: Use global state to affect Plan Grid currency and remove this */}
                     <Currency currency={value}>20</Currency>
                 </div>
             </header>
