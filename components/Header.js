@@ -19,6 +19,7 @@ export default function Header({ page, navigation }) {
                             {/* TODO: Get PrismicImage or PrismicNextImage working */}
                             <Image
                                 src={page.data.site_logo.url}
+                                alt={""}
                                 width={100}
                                 height={100}
                             />
@@ -43,9 +44,7 @@ export default function Header({ page, navigation }) {
                         <option value="EUR">Euro</option>
                         <option value="GBP">British Pound</option>
                     </select>
-                    <p>
-                        <Currency currency={value}>20</Currency>
-                    </p>
+                    <Currency currency={value}>20</Currency>
                 </div>
             </header>
         </section>

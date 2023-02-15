@@ -4,10 +4,6 @@ import Head from "next/head";
 import Header from "./Header";
 import Footer from "./Footer";
 
-{
-    /* TODO: Move footer same as Header */
-}
-
 export default function Layout({ children, page, navigation }) {
     return (
         <>

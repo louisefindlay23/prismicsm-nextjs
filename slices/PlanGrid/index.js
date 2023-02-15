@@ -12,7 +12,7 @@ const FeatureGrid = ({ slice }) => (
     <section className={styles.grid}>
         {/* Card */}
         {slice?.items?.map((item, i) => (
-            <div className={styles.card}>
+            <div className={styles.card} key={JSON.stringify(item)}>
                 <PrismicRichText field={item.plan_title} />
                 <h4>
                     <Currency locale="en-US" currency="USD">
