@@ -9,11 +9,6 @@ import {
 import { Currency } from "react-intl-number-format";
 import Navigation from "./Navigation";
 
-/**
- * @typedef {import("@prismicio/client").Content.HeaderSlice} HeaderSlice
- * @typedef {import("@prismicio/react").SliceComponentProps<HeaderSlice>} HeaderProps
- * @param { HeaderProps }
- */
 export default function Header({ page, navigation }) {
     const [value, setValue] = useState("USD");
     return (

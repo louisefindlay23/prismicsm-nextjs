@@ -1,7 +1,4 @@
 import React from "react";
-import styles from "./navigation.module.css";
-import { PrismicText } from "@prismicio/react";
-import { PrismicLink } from "@prismicio/react";
 
 /**
  * @typedef {import("@prismicio/client").Content.HeaderSlice} HeaderSlice
@@ -9,22 +6,6 @@ import { PrismicLink } from "@prismicio/react";
  * @param { HeaderProps }
  */
 
-const Navigation = ({ slice }) => (
-    <nav className={styles.nav}>
-        <ul>
-            {slice?.items?.map((item, i) => {
-                return (
-                    <li key={JSON.stringify(item)}>
-                        <PrismicLink field={item.navigation_links}>
-                            <PrismicText
-                                field={item.navigation_text}
-                            ></PrismicText>
-                        </PrismicLink>
-                    </li>
-                );
-            })}
-        </ul>
-    </nav>
-);
+const Navigation = ({ slice }) => <></>;
 
 export default Navigation;

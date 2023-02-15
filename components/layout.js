@@ -4,6 +4,7 @@ import Link from "next/link";
 import { PrismicRichText, PrismicText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/react";
 import Header from "./Header";
+import Footer from "./Footer";
 
 {
     /* TODO: Move footer same as Header */
@@ -19,6 +20,7 @@ export default function Layout({ children, page, navigation }) {
             </Head>
             <Header page={page} navigation={navigation}></Header>
             <main>{children}</main>
+            <Footer page={page}></Footer>
         </>
     );
 }

@@ -6,12 +6,7 @@ const Hero = ({ slice }) => (
     <section
         className={`${styles.heroBackground} ${styles.flexVerticalCenter}`}
     >
-        {/* No support for ::before pseudo attributes */}
-        <div
-            className={[styles.heroContent, styles.flexVerticalCenter].join(
-                " "
-            )}
-        >
+        <div className={`${styles.heroContent} ${styles.flexVerticalCenter}`}>
             {/* Hero Content */}
             <PrismicRichText field={slice.primary.hero_heading} />
             <PrismicRichText field={slice.primary.hero_text} />
@@ -23,6 +18,10 @@ const Hero = ({ slice }) => (
 );
 
 export default Hero;
+
+{
+    /* TODO: Refactor background image to CSS Grid to set URL as fallback and background image as Prismic Image field */
+}
 
 <div class="grid">
     <img />

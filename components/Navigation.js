@@ -1,5 +1,5 @@
 import { PrismicLink, PrismicText } from "@prismicio/react";
-import styles from "../slices/Navigation/navigation.module.css";
+import styles from "../styles/navigation.module.css";
 
 export default function Navigation({ navigation }) {
     return (

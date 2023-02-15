@@ -29,6 +29,15 @@
           "thumbnails": []
         }
       },
+      "site_author": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Site Author",
+          "placeholder": "",
+          "allowTargetBlank": true,
+          "single": "paragraph"
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",

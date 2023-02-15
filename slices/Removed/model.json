@@ -1,7 +1,7 @@
 {
   "id": "footer",
   "type": "SharedSlice",
-  "name": "Footer",
+  "name": "Removed",
   "description": "Footer",
   "variations": [
     {
@@ -10,15 +10,7 @@
       "docURL": "...",
       "version": "sktwi1xtmkfgx8626",
       "description": "Footer",
-      "primary": {
-        "site_author": {
-          "type": "Text",
-          "config": {
-            "label": "Site Author",
-            "placeholder": ""
-          }
-        }
-      },
+      "primary": {},
       "items": {},
       "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
     }

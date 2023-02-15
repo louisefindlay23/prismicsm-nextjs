@@ -31,6 +31,17 @@ interface HomeDocumentData {
      */
     site_logo: prismicT.ImageField<never>;
     /**
+     * Site Author field in *Home*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: home.site_author
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    site_author: prismicT.RichTextField;
+    /**
      * Slice Zone field in *Home*
      *
      * - **Field Type**: Slice Zone
@@ -87,45 +98,6 @@ type NavigationDocumentDataSlicesSlice = HeaderSlice;
  */
 export type NavigationDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<NavigationDocumentData>, "navigation", Lang>;
 export type AllDocumentTypes = HomeDocument | NavigationDocument;
-/**
- * Primary content in Footer → Primary
- *
- */
-interface FooterSliceDefaultPrimary {
-    /**
-     * Site Author field in *Footer → Primary*
-     *
-     * - **Field Type**: Text
-     * - **Placeholder**: *None*
-     * - **API ID Path**: footer.primary.site_author
-     * - **Documentation**: https://prismic.io/docs/core-concepts/key-text
-     *
-     */
-    site_author: prismicT.KeyTextField;
-}
-/**
- * Default variation for Footer Slice
- *
- * - **API ID**: `default`
- * - **Description**: `Footer`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type FooterSliceDefault = prismicT.SharedSliceVariation<"default", Simplify<FooterSliceDefaultPrimary>, never>;
-/**
- * Slice variation for *Footer*
- *
- */
-type FooterSliceVariation = FooterSliceDefault;
-/**
- * Footer Shared Slice
- *
- * - **API ID**: `footer`
- * - **Description**: `Footer`
- * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
- *
- */
-export type FooterSlice = prismicT.SharedSlice<"footer", FooterSliceVariation>;
 /**
  * Primary content in Hero → Primary
  *
@@ -303,11 +275,34 @@ type FeatureGridSliceVariation = FeatureGridSliceDefault;
  *
  */
 export type FeatureGridSlice = prismicT.SharedSlice<"feature_grid", FeatureGridSliceVariation>;
+/**
+ * Default variation for Removed Slice
+ *
+ * - **API ID**: `default`
+ * - **Description**: `Footer`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FooterSliceDefault = prismicT.SharedSliceVariation<"default", Record<string, never>, never>;
+/**
+ * Slice variation for *Removed*
+ *
+ */
+type FooterSliceVariation = FooterSliceDefault;
+/**
+ * Removed Shared Slice
+ *
+ * - **API ID**: `footer`
+ * - **Description**: `Footer`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/reusing-slices
+ *
+ */
+export type FooterSlice = prismicT.SharedSlice<"footer", FooterSliceVariation>;
 declare module "@prismicio/client" {
     interface CreateClient {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, AllDocumentTypes, FooterSliceDefaultPrimary, FooterSliceDefault, FooterSliceVariation, FooterSlice, TestSliceDefaultPrimary, TestSliceDefault, TestSliceVariation, TestSlice, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, FeatureGridSliceDefaultItem, FeatureGridSliceDefault, FeatureGridSliceVariation, FeatureGridSlice };
+        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, AllDocumentTypes, TestSliceDefaultPrimary, TestSliceDefault, TestSliceVariation, TestSlice, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, FeatureGridSliceDefaultItem, FeatureGridSliceDefault, FeatureGridSliceVariation, FeatureGridSlice, FooterSliceDefault, FooterSliceVariation, FooterSlice };
     }
 }
