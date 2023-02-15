@@ -1,7 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "../styles/header.module.css";
 import Link from "next/link";
-import { PrismicLink, PrismicNextImage } from "@prismicio/react";
+import {
+    PrismicLink,
+    PrismicNextImage,
+    PrismicRichText,
+} from "@prismicio/react";
+import { Currency } from "react-intl-number-format";
 import Navigation from "./Navigation";
 
 /**
@@ -10,6 +15,7 @@ import Navigation from "./Navigation";
  * @param { HeaderProps }
  */
 export default function Header({ page }) {
+    const [value, setValue] = useState("USD");
     return (
         <section>
             {/* Header */}

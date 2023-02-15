@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import Head from "next/head";
 import Link from "next/link";
-import { Currency } from "react-intl-number-format";
 import { PrismicRichText, PrismicText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/react";
 import Header from "./Header";
@@ -11,7 +10,6 @@ import Header from "./Header";
 }
 
 export default function Layout({ children, page }) {
-    const [value, setValue] = useState("USD");
     return (
         <>
             <Head>
