@@ -1,6 +1,6 @@
 import React from "react";
-import Image from "next/image";
 import { PrismicRichText } from "@prismicio/react";
+import { PrismicNextImage } from "@prismicio/next";
 import styles from "./hero.module.css";
 
 const Hero = ({ slice }) => (
@@ -13,9 +13,8 @@ const Hero = ({ slice }) => (
                 <PrismicRichText field={slice.primary.hero_button_text} />
             </button>
         </div>
-        {/* TODO: Get PrismicImage or PrismicNextImage working */}
-        <Image
-            src={slice.primary.hero_image.url}
+        <PrismicNextImage
+            field={slice.primary.hero_image}
             alt={""}
             width={1920}
             height={100}

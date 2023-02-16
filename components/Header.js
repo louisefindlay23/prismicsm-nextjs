@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
 import { PrismicRichText } from "@prismicio/react";
+import { PrismicNextImage } from "@prismicio/next";
 import { Currency } from "react-intl-number-format";
 import Navigation from "./Navigation";
 import styles from "../styles/header.module.css";
@@ -16,9 +16,8 @@ export default function Header({ page, navigation }) {
                     {/* Logo Link */}
                     <div className={styles.logo}>
                         <Link href="/">
-                            {/* TODO: Get PrismicImage or PrismicNextImage working */}
-                            <Image
-                                src={page.data.site_logo.url}
+                            <PrismicNextImage
+                                field={page.data.site_logo}
                                 alt={""}
                                 width={100}
                                 height={100}
