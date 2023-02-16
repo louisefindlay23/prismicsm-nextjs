@@ -20,7 +20,8 @@ If you wish to run Slice Machine to view, edit and create the slices, run `npm r
 
 - **[Getting Started - Next.js Docs](https://nextjs.org/docs/getting-started)** - to create a basic Next.js app using `create-next-app`
 - **[Set Up Prismic (Next.js) - Prismic Docs](https://prismic.io/docs/setup-nextjs)** - to use as a getting started guide for Slice Machine with `create-next-app`
-- **[Navigation Menus (Next.js) - Prismic Docs](https://prismic.io/docs/navigation-menus-nextjs)** - to use to help model navigation 
+- **[Navigation Menus (Next.js) - Prismic Docs](https://prismic.io/docs/navigation-menus-nextjs)** - to use to help model navigation
+- **[State Management In Next.js - Smashing Magazine](https://www.smashingmagazine.com/2021/08/state-management-nextjs)** - to understand state management in React to pass currency between select in `Header` and the prices in `FeatureGrid`.
 
 #### CSS
 

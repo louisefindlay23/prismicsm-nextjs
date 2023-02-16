@@ -11,11 +11,6 @@ import styles from "./planGrid.module.css";
  */
 export default function FeatureGrid({ slice }) {
     const { currency } = useCurrency();
-    const { setCurrency } = useCurrency();
-    useEffect(() => {
-        setCurrency(currency);
-        console.log(currency);
-    }, [currency]);
     return (
         <section className={styles.grid}>
             {/* Card */}

@@ -2,12 +2,14 @@ import React, { useEffect } from "react";
 import Link from "next/link";
 import { PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
-import { Currency } from "react-intl-number-format";
 import { useCurrency } from "../context/currencyData";
 import Navigation from "./Navigation";
 import styles from "../styles/header.module.css";
 
 export default function Header({ page, navigation }) {
+    {
+        /* Use Context Provider to update currency */
+    }
     const { currency } = useCurrency();
     const { setCurrency } = useCurrency();
     useEffect(() => {
@@ -36,7 +38,7 @@ export default function Header({ page, navigation }) {
                     </Link>
                     {/* Nav */}
                     <Navigation navigation={navigation}></Navigation>
-                    {/* Currency */}
+                    {/* Currency Select */}
                     <select
                         className={styles.currencyDropdown}
                         currency={currency}
