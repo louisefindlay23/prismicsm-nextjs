@@ -17,3 +17,9 @@
     font-size: 1rem;
     font-weight: 500;
 }
+
+@media (max-width: 910px) {
+    .nav {
+        flex-direction: column;
+    }
+}
