@@ -6,7 +6,7 @@ Develop a basic homepage with mock content to learn how to use Prismic's Slice M
 
 ### Screenshot
 
-![Next.js Prismic Slice Machine Website Screenshot](https://user-images.githubusercontent.com/26024131/216591081-fea98d17-1061-4bef-908c-ac8690872a10.png)
+![Next.js Slice Machine Website Screenshot](https://user-images.githubusercontent.com/26024131/219398683-8cfac003-9cf3-4749-9f75-d24e63a28a11.png)
 
 ### View Website
 
