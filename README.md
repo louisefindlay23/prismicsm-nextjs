@@ -23,7 +23,8 @@ If you wish to run Slice Machine to view, edit and create the slices, run `npm r
 
 #### CSS
 
-- **[Backdrop Filter - CSS Tricks Article](https://css-tricks.com/the-backdrop-filter-css-property)** - to use the backdrop-filter property for the Hero slice
+- **[Backdrop Filter - CSS Tricks](https://css-tricks.com/the-backdrop-filter-css-property)** - to use the backdrop-filter property for the Hero slice
+- **[Positioning Overlay Content with CSS Grid - CSS Tricks](https://css-tricks.com/positioning-overlay-content-with-css-grid)** - to use CSS Grid for the background image so the image can be set in Prismic.
 - **[Beautiful CSS `box-shadow` Examples - CSS Scan](https://getcssscan.com/css-box-shadow-examples)** - to obtain CSS for a `box-shadow` for the pricing cards
 
 #### Design
