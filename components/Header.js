@@ -1,13 +1,19 @@
-import React, { useState } from "react";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import { PrismicRichText } from "@prismicio/react";
 import { PrismicNextImage } from "@prismicio/next";
 import { Currency } from "react-intl-number-format";
+import { useCurrency } from "../context/currencyData";
 import Navigation from "./Navigation";
 import styles from "../styles/header.module.css";
 
 export default function Header({ page, navigation }) {
-    const [value, setValue] = useState("USD");
+    const { currency } = useCurrency();
+    const { setCurrency } = useCurrency();
+    useEffect(() => {
+        setCurrency(currency);
+        console.log(currency);
+    }, [currency]);
     return (
         <section>
             {/* Header */}
@@ -33,10 +39,9 @@ export default function Header({ page, navigation }) {
                     {/* Currency */}
                     <select
                         className={styles.currencyDropdown}
-                        value={value}
+                        currency={currency}
                         onChange={(e) => {
-                            setValue(e.target.value);
-                            console.log(value);
+                            setCurrency(e.target.value);
                         }}
                     >
                         <option value="USD">US Dollar</option>
@@ -44,7 +49,7 @@ export default function Header({ page, navigation }) {
                         <option value="GBP">British Pound</option>
                     </select>
                     {/* TODO: Use global state to affect Plan Grid currency and remove this */}
-                    <Currency currency={value}>20</Currency>
+                    <Currency currency={currency}>20</Currency>
                 </div>
             </header>
         </section>
