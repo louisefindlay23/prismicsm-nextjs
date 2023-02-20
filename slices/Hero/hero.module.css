@@ -25,6 +25,16 @@
     text-align: center;
 }
 
-.heroContent p:last-of-type {
+.heroContent p {
     margin: 2.5% 0;
+}
+
+@media (max-width: 931px) {
+    .heroContent {
+        margin: 0 5%;
+    }
+
+    .heroContent p {
+        margin: 5% 0;
+    }
 }
