@@ -6,7 +6,7 @@ import Layout from "../components/Layout";
 export default function Home({ page, navigation, settings }) {
     return (
         <Layout page={page} navigation={navigation}>
-            <SliceZone slices={page.data.slices} components={components} />;
+            <SliceZone slices={page.data.slices} components={components} />
         </Layout>
     );
 }
