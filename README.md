@@ -4,6 +4,14 @@
 
 Develop a basic homepage with mock content to learn how to use Prismic's Slice Machine with Next.js.
 
+The page has four sections: Header, Hero, Plan Grid, and Footer. A layout is used for the head of the website and wraps the Header and Footer components around the page content as well as passing the currency context provider.
+
+The Header component contains the Navigation slice so links can be added and edited using Prismic.
+
+The Hero slice uses CSS Grid so the background image can be updated using Prismic.
+
+The currency select uses a context provider to pass the value from the Header component to the Plan Grid slice to update the currency of the plan prices.
+
 ### Screenshot
 
 ![Next.js Slice Machine Website Screenshot](https://user-images.githubusercontent.com/26024131/219398683-8cfac003-9cf3-4749-9f75-d24e63a28a11.png)
