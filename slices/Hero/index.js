@@ -13,6 +13,7 @@ const Hero = ({ slice }) => (
                 <PrismicRichText field={slice.primary.hero_button_text} />
             </button>
         </div>
+        {/* Hero Image */}
         <PrismicNextImage
             field={slice.primary.hero_image}
             alt={""}

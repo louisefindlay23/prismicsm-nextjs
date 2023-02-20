@@ -7,21 +7,18 @@ import Navigation from "./Navigation";
 import styles from "../styles/header.module.css";
 
 export default function Header({ page, navigation }) {
-    {
-        /* Use Context Provider to update currency */
-    }
+    /* Use Context Provider to update currency */
     const { currency } = useCurrency();
     const { setCurrency } = useCurrency();
     useEffect(() => {
         setCurrency(currency);
-        console.log(currency);
     }, [currency]);
     return (
         <section>
             {/* Header */}
             <header className={styles.header}>
                 <div className={styles.wrapper}>
-                    {/* Logo Link */}
+                    {/* Logo Image + Link */}
                     <div className={styles.logo}>
                         <Link href="/">
                             <PrismicNextImage

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { PrismicRichText } from "@prismicio/react";
 import { Currency } from "react-intl-number-format";
 import { useCurrency } from "../../context/currencyData";

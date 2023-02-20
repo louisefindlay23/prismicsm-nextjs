@@ -6,6 +6,7 @@ import Footer from "./Footer";
 import { CurrencyProvider } from "../context/currencyData";
 
 export default function Layout({ children, page, navigation }) {
+    /* Render Site Title as plain text */
     const siteTitle = prismicH.asText(page.data.site_title);
     return (
         <>

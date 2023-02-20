@@ -1,9 +1,6 @@
 import { createContext, useContext, useState } from "react";
-
-{
-    /* Create context provider to store currency and send to other components and slices */
-}
-const CurrencyContext = createContext(undefined);
+/* Create context provider to store currency and send to other components and slices */
+const CurrencyContext = createContext(null);
 
 export function CurrencyProvider({ children }) {
     const [currency, setCurrency] = useState("USD");
