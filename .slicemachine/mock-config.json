@@ -1,7 +1,10 @@
 {
   "_cts": {
     "home": {},
-    "navigation": {}
+    "navigation": {},
+    "layout": {
+      "top_navigation": {}
+    }
   },
   "slices": {
     "Header": {
