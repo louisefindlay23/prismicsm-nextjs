@@ -1,0 +1,61 @@
+{
+  "id": "layout",
+  "label": "Layout",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "site_title": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Site title",
+          "placeholder": "",
+          "allowTargetBlank": false,
+          "single": "heading1"
+        }
+      },
+      "site_logo": {
+        "type": "Image",
+        "config": {
+          "label": "Site logo",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "site_author": {
+        "type": "StructuredText",
+        "config": {
+          "label": "Site author",
+          "placeholder": "",
+          "allowTargetBlank": false,
+          "single": "paragraph"
+        }
+      },
+      "top_navigation": {
+        "type": "Group",
+        "config": {
+          "label": "Top navigation",
+          "fields": {
+            "text": {
+              "type": "StructuredText",
+              "config": {
+                "label": "Text",
+                "placeholder": "",
+                "allowTargetBlank": false,
+                "single": "paragraph"
+              }
+            },
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "Link",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

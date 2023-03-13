@@ -1,25 +1,26 @@
-import "../public/globals.css";
 import Link from "next/link";
 import { Inter } from "@next/font/google";
 import { PrismicProvider } from "@prismicio/react";
 import { PrismicPreview } from "@prismicio/next";
-import { repositoryName } from "../prismicio";
+import { repositoryName } from "prismicio";
+
+import "../public/globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function App({ Component, pageProps }) {
-    return (
-        <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
-            <PrismicPreview repositoryName={repositoryName}>
-                <>
-                    <style jsx global>{`
-                        html {
-                            font-family: ${inter.style.fontFamily};
-                        }
-                    `}</style>
-                </>
-                <Component {...pageProps} />
-            </PrismicPreview>
-        </PrismicProvider>
-    );
+  return (
+    <PrismicProvider internalLinkComponent={(props) => <Link {...props} />}>
+      <PrismicPreview repositoryName={repositoryName}>
+        <>
+          <style jsx global>{`
+            html {
+              font-family: ${inter.style.fontFamily};
+            }
+          `}</style>
+        </>
+        <Component {...pageProps} />
+      </PrismicPreview>
+    </PrismicProvider>
+  );
 }

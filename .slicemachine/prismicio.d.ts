@@ -68,6 +68,89 @@ type HomeDocumentDataSlicesSlice = TestSlice | FeatureGridSlice | FooterSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type HomeDocument<Lang extends string = string> = prismicT.PrismicDocumentWithUID<Simplify<HomeDocumentData>, "home", Lang>;
+/** Content for Layout documents */
+interface LayoutDocumentData {
+    /**
+     * Site title field in *Layout*
+     *
+     * - **Field Type**: Title
+     * - **Placeholder**: *None*
+     * - **API ID Path**: layout.site_title
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    site_title: prismicT.TitleField;
+    /**
+     * Site logo field in *Layout*
+     *
+     * - **Field Type**: Image
+     * - **Placeholder**: *None*
+     * - **API ID Path**: layout.site_logo
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/image
+     *
+     */
+    site_logo: prismicT.ImageField<never>;
+    /**
+     * Site author field in *Layout*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: layout.site_author
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    site_author: prismicT.RichTextField;
+    /**
+     * Top navigation field in *Layout*
+     *
+     * - **Field Type**: Group
+     * - **Placeholder**: *None*
+     * - **API ID Path**: layout.top_navigation[]
+     * - **Tab**: Main
+     * - **Documentation**: https://prismic.io/docs/core-concepts/group
+     *
+     */
+    top_navigation: prismicT.GroupField<Simplify<LayoutDocumentDataTopNavigationItem>>;
+}
+/**
+ * Item in Layout → Top navigation
+ *
+ */
+export interface LayoutDocumentDataTopNavigationItem {
+    /**
+     * Text field in *Layout → Top navigation*
+     *
+     * - **Field Type**: Rich Text
+     * - **Placeholder**: *None*
+     * - **API ID Path**: layout.top_navigation[].text
+     * - **Documentation**: https://prismic.io/docs/core-concepts/rich-text-title
+     *
+     */
+    text: prismicT.RichTextField;
+    /**
+     * Link field in *Layout → Top navigation*
+     *
+     * - **Field Type**: Link
+     * - **Placeholder**: *None*
+     * - **API ID Path**: layout.top_navigation[].link
+     * - **Documentation**: https://prismic.io/docs/core-concepts/link-content-relationship
+     *
+     */
+    link: prismicT.LinkField;
+}
+/**
+ * Layout document from Prismic
+ *
+ * - **API ID**: `layout`
+ * - **Repeatable**: `false`
+ * - **Documentation**: https://prismic.io/docs/core-concepts/custom-types
+ *
+ * @typeParam Lang - Language API ID of the document.
+ */
+export type LayoutDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<LayoutDocumentData>, "layout", Lang>;
 /** Content for Navigation documents */
 interface NavigationDocumentData {
     /**
@@ -97,7 +180,7 @@ type NavigationDocumentDataSlicesSlice = HeaderSlice;
  * @typeParam Lang - Language API ID of the document.
  */
 export type NavigationDocument<Lang extends string = string> = prismicT.PrismicDocumentWithoutUID<Simplify<NavigationDocumentData>, "navigation", Lang>;
-export type AllDocumentTypes = HomeDocument | NavigationDocument;
+export type AllDocumentTypes = HomeDocument | LayoutDocument | NavigationDocument;
 /**
  * Primary content in Hero → Primary
  *
@@ -303,6 +386,6 @@ declare module "@prismicio/client" {
         (repositoryNameOrEndpoint: string, options?: prismic.ClientConfig): prismic.Client<AllDocumentTypes>;
     }
     namespace Content {
-        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, AllDocumentTypes, TestSliceDefaultPrimary, TestSliceDefault, TestSliceVariation, TestSlice, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, FeatureGridSliceDefaultItem, FeatureGridSliceDefault, FeatureGridSliceVariation, FeatureGridSlice, FooterSliceDefault, FooterSliceVariation, FooterSlice };
+        export type { HomeDocumentData, HomeDocumentDataSlicesSlice, HomeDocument, LayoutDocumentData, LayoutDocumentDataTopNavigationItem, LayoutDocument, NavigationDocumentData, NavigationDocumentDataSlicesSlice, NavigationDocument, AllDocumentTypes, TestSliceDefaultPrimary, TestSliceDefault, TestSliceVariation, TestSlice, HeaderSliceDefaultItem, HeaderSliceDefault, HeaderSliceVariation, HeaderSlice, FeatureGridSliceDefaultItem, FeatureGridSliceDefault, FeatureGridSliceVariation, FeatureGridSlice, FooterSliceDefault, FooterSliceVariation, FooterSlice };
     }
 }
